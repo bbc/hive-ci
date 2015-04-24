@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="inner">
+              <h3 class="masthead-brand">Hive CI</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/hive-scheduler">Hive CI</a></li>
+                  <li><a href="/hive-ci/devicedb">DeviceDB</a></li>
+                  <li><a href="/hive-ci/testmite">Testmite</a></li>
+                  <li><a href="/hive-ci/contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div>
+          {{ content }}
+        </div>          
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ "/js/ie10-viewport-bug-workaround.js" | prepend: site.baseurl }}"></script>
+  </body>
+</html>
+

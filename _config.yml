@@ -1,0 +1,11 @@
+# Site settings
+title: Hive CI | CI for device testing
+description: >
+  Device-centric CI
+sass:
+  sass_dir: _sass
+
+baseurl: /hive-ci
+
+# Build settings
+markdown: kramdown
