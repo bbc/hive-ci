@@ -10,6 +10,7 @@
 /tmp/
 .sass-cache
 _site/
+.DS_Store
 
 ## Specific to RubyMotion:
 .dat*
