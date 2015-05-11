@@ -4,24 +4,18 @@
   {% include head.html %}
 
   <body>
-
-    {% include navbar.html %}
-
-    <div>
-
-     {{ content }}
-
-     {% include footer.html %}
-
+    <div class="site-wrapper page-image">
+      
+      {% include navbar.html %}
+    
+      <div class="page-content">
+        {{ content }}
+      </div>
+      
     </div>
+    
+    {% include scripts.html %}
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ "/js/ie10-viewport-bug-workaround.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>
 

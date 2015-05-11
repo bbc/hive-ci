@@ -3,11 +3,10 @@
 
 @import "bootstrap";
 
-
 html,
 body {
   height: 100%;
-  background-color: rgb(0,0,0);
+  background-color: rgb(208,205,195);
 }
 
 p, li {
@@ -15,93 +14,70 @@ p, li {
 }
 
 .site-wrapper {
-  display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  background-image: url("/hive-ci/images/hiveci-banner.png");
-  background-repeat: no-repeat;
-  background-color: rgb(208,205,195);
+  height: 100%;
 }
 
 .cover-image {
-  background-image: url("/hive-ci/images/hiveci-landing.png");
-} 
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
+  min-height: 100%;
+  width: 100%;
+  background-image: url("/hive-ci/images/hiveci-landing-2.png");
+  background-repeat: no-repeat;
 }
 
+.page-image {
+  min-height: 100%;
+  background-image: url("/hive-ci/images/hiveci-banner-2.png");
+  background-repeat: no-repeat;
+}
 
 /*
- * Header
+ * Navbar
  */
 .navbar {
   color: white;
-  opacity: 0.8
-}
-
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
+  opacity: 0.8;
+  margin-bottom: 0px;
 }
 
 
 /*
- * Cover
+ * Topic headers
  */
-
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-.cover-content {
+.topic-highlight {
+  margin-top: 50px;
   padding: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
+
+/*
+ * Front banner
+ */
+.banner-highlight {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(75,75,75);
+}
+
+.banner-left {
+  text-align: right;
+  text-transform: uppercase;
+  border-right: 5px;
+  border-right-style: solid;
+  border-right-color: rgb(255,255,255);
+}
+
+.banner-right {
+  text-align: left;
+}
+
+
+
 
 .cover-row {
-  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .cover-list {
@@ -110,9 +86,8 @@ p, li {
 
 .cover-well {
   background-color: rgba(255, 255, 255, 0.2);
-  border: black;
-  padding: 25px;
-  margin-bottom: 200px;
+  border: none;
+  margin-top: 25px;
 }
 
 .cover-shaded {
