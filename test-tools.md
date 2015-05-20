@@ -29,7 +29,7 @@ and identifying problems with devices.
 
 We use *DeviceAPI* heavily to leverage devices in *Hive CI*. It's also used by
 our test developers in their test code. It's our interface to the devices we
-test against and is where we put all common code for interacting with out
+test against and is where we put all common code for interacting with our
 physical devices. It also provides an abstraction so we can deal with devices
 interchangeably.
 
@@ -68,7 +68,7 @@ handles functions like:
 #### DeviceAPI-IOS
 
 *DeviceAPI-IOS* is the iOS implementation of *DeviceAPI*. It uses
-*[libimobildevice](http://www.libimobiledevice.org/)* for interacting with
+*[libimobiledevice](http://www.libimobiledevice.org/)* for interacting with
 connected devices.
 
 This gem offers most of the same features as the Android version. The API 
@@ -108,7 +108,7 @@ video playback tests and confirm that video is actually being played.
 ISA uses ImageMagick to do the actual image analysis, but presents a simple
 interface lets you concentrate on writing your tests.
 
-It also generats animated gifs of the testing session, so we can visibly check
+It also generates animated gifs of the testing session, so we can visibly check
 any problems the tests find.
 
 
