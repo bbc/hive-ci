@@ -10,7 +10,12 @@ body {
 }
 
 p, li {
-  font-size: 17px;
+  font-size: 16px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .site-wrapper {
@@ -19,7 +24,7 @@ p, li {
 }
 
 .cover-image {
-  min-height: 100%;
+  min-height: 520px;
   width: 100%;
   background-image: url("/hive-ci/images/hiveci-landing-2.png");
   background-repeat: no-repeat;
@@ -29,6 +34,10 @@ p, li {
   min-height: 100%;
   background-image: url("/hive-ci/images/hiveci-banner-2.png");
   background-repeat: no-repeat;
+}
+
+.page-content {
+  padding-top: 50px;
 }
 
 /*
@@ -56,7 +65,8 @@ p, li {
  */
 .banner-highlight {
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(75,75,75);
 }
@@ -73,9 +83,6 @@ p, li {
   text-align: left;
 }
 
-
-
-
 .cover-row {
   margin-bottom: 100px;
 }
@@ -91,7 +98,6 @@ p, li {
 }
 
 .cover-shaded {
-  background-color: rgba(255, 255, 255, 0.5);
   border: black;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -101,4 +107,14 @@ p, li {
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
+}
+
+
+// Buttons
+.btn a {
+  color: rgb(0,0,0);
+}
+
+.btn-default {
+  background-color: rgb(187,185,193);
 }
