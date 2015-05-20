@@ -19,5 +19,12 @@ DeviceDB allows you to administer your hives and devices:
 * Look up device information
 * Spot problems with devices
 
-It also serves as an inventory system for your office devices.</p>
-  
+It also serves as an inventory system for your office devices.
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
