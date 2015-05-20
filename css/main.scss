@@ -104,9 +104,16 @@ hr {
 }
 
 
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  background-color: rgb(187,185,193);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 13px;  
 }
 
 

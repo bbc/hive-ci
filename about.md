@@ -31,7 +31,7 @@ particularly by external interest in our on-device CI system: *Hive CI*
 We're making everything available on github on our
 [BBC](https://github.com/bbc) organisation.
 
-The full *Hive CI* solution isn't quire ready to share yet, but we are
+The full *Hive CI* solution isn't quite ready to share yet, but we are
 committed to releasing all our internal test tools over 2015.
 
 <br />
