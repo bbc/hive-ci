@@ -3,6 +3,8 @@ layout: default
 title: DeviceDB
 ---
 
+<h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
+
 # DeviceDB
 
 {: .lead}

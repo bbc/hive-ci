@@ -3,6 +3,8 @@ layout: default
 title: Hive CI
 ---
 
+<h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
+
 # Hive CI
 
 {: .lead}
