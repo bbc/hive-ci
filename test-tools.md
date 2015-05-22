@@ -59,9 +59,9 @@ handles functions like:
 * executing monkey testing
 
 <br />
-<button class="btn btn-default">[Code](https://github.com/bbc/device_api-android)</button>
-<button class="btn btn-default">[Gem](https://rubygems.org/gems/device_api-android)</button>
-<button class="btn btn-default">[Docs](http://www.rubydoc.info/github/bbc/device_api-android/master)</button>
+<a class="btn btn-default" href="https://github.com/bbc/device_api-android">Code</a>
+<a class="btn btn-default" href="https://rubygems.org/gems/device_api-android">Gems</a>
+<a class="btn btn-default" href="http://www.rubydoc.info/github/bbc/device_api-android/master">Docs</a>
 
 * * * 
 
