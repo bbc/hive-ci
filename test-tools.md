@@ -92,9 +92,9 @@ write a *DeviceAPI* gem for a new type of device (say a smart fridge or mass
 spectrometer) you should take a look at the base gem documentation.
 
 <br />
-<button class="btn btn-default">[Code](https://github.com/bbc/isa)</button>
-<button class="btn btn-default">[Gem](https://rubygems.org/gems/isa)</button>
-<button class="btn btn-default">[Docs](http://www.rubydoc.info/github/bbc/isa/master)</button>
+<button class="btn btn-default">[Code](https://github.com/bbc/device_api)</button>
+<button class="btn btn-default">[Gem](https://rubygems.org/gems/device_api)</button>
+<button class="btn btn-default">[Docs](http://www.rubydoc.info/github/bbc/device_api/master)</button>
 
 
 * * * 
