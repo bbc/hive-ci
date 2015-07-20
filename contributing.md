@@ -12,7 +12,7 @@ to make contribution as easy as possible**
 
 <br />
 
-## License
+## Licence
 
 In order to make adoption and contribution as easy as possible, all components of
 BBC Hive are released under the MIT open source license:
@@ -59,7 +59,7 @@ request. We promise to get back to you promptly. Take a look at this
 for more information.
 
 If your contribution is significant, we ask that you complete a contributor
-license agreement.
+licence agreement.
 
 <br />
 
