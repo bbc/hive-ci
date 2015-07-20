@@ -19,7 +19,7 @@ ensure the widest posible audience reach we have to test these applications
 across hundreds of different device models. This is enormously expensive and
 slows down our abilty to push new features out to our audiences. In
 order reduce the manual testing effort, we invested heavily in automation
-and became very good at writing automated tests to help eliviate the testing
+and became very good at writing automated tests to help alleviate the testing
 effort. This only helped so much; although we had good automation suites,
 actually running them was an expensive manual job -- locating devices, setting
 up test environments, executing the scripts, and collating and interpreting the
