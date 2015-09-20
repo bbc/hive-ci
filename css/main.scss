@@ -24,16 +24,14 @@ hr {
 }
 
 .cover-image {
-  min-height: 520px;
+  min-height: 430px;
   width: 100%;
-  background-image: url("/hive-ci/images/hiveci-landing-2.png");
-  background-repeat: no-repeat;
+  background: url("/hive-ci/images/hiveci-landing-3.png") no-repeat center top;
 }
 
 .page-image {
   min-height: 100%;
-  background-image: url("/hive-ci/images/hiveci-banner-2.png");
-  background-repeat: no-repeat;
+  background: url("/hive-ci/images/hiveci-banner-3.png") no-repeat center top;
 }
 
 .page-content {
