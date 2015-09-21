@@ -5,7 +5,7 @@ title: Testmine
 
 <h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
 
-# Testmite
+# Testmine
 
 {: .lead}
 Test Result Analytics
