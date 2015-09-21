@@ -3,10 +3,13 @@
 
 @import "bootstrap";
 
+$bg-colour: white;
+$strip-colour: rgb(230,230,230);
+
 html,
 body {
   height: 100%;
-  background-color: rgb(208,205,195);
+  background-color: $bg-colour;
 }
 
 p, li {
@@ -66,11 +69,13 @@ hr {
  * Front banner
  */
 .banner-highlight {
-  padding: 20px;
+  padding-top: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgb(75,75,75);
+  padding-bottom: 20px;
+  background: url("/hive-ci/images/hiveci-banner-3.png") no-repeat bottom;
+  background-color: $strip-colour;
+  color: rgb(0,0,0);
 }
 
 .banner-left {
@@ -82,6 +87,7 @@ hr {
 }
 
 .banner-right {
+  padding-left: 20px;
   text-align: left;
 }
 
@@ -99,13 +105,6 @@ hr {
   height: 250px;
 }
 
-
-.cover-well {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  margin-top: 25px;
-}
-
 .cover-shaded {
   border: black;
   padding-top: 50px;
@@ -117,20 +116,10 @@ hr {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 50px;
-  background-color: rgb(187,185,193);
   text-align: center;
+  background: url("/hive-ci/images/hiveci-banner-3.png") no-repeat bottom $strip-colour;
 }
 
 .footer p {
-  font-size: 13px;  
-}
-
-
-// Buttons
-.btn a {
-  color: rgb(0,0,0);
-}
-
-.btn-default {
-  background-color: rgb(187,185,193);
+  font-size: 13px;
 }
