@@ -73,7 +73,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  background: url("/hive-ci/images/hiveci-banner-3.png") no-repeat bottom;
+  background: url("/hive-ci/images/hiveci-strip.png") no-repeat center;
   background-color: $strip-colour;
   color: rgb(0,0,0);
 }
@@ -117,7 +117,7 @@ hr {
   padding-bottom: 20px;
   margin-top: 50px;
   text-align: center;
-  background: url("/hive-ci/images/hiveci-banner-3.png") no-repeat bottom $strip-colour;
+  background: url("/hive-ci/images/hiveci-strip.png") no-repeat center $strip-colour;
 }
 
 .footer p {
