@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <div class="site-wrapper page-image">
+      
+      {% include navbar.html %}
+       
+              
+      <div class="row">
+        
+      <div class="page-content">
+        {{ page.name }}
+        <div class="col-xs-12 col-sm-2">
+          <ul class="nav nav-pills nav-stacked">
+            {% for doc in site.documentation %}
+            <li role="presentation">
+              <a href="/hive-ci{{ doc.url }}">{{ doc.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      
+                        
+        <div class="col-xs-10  col-sm-8">
+        {{ content }}
+        </div>
+      </div>
+      </div>
+    
+      {% include footer.html %}
+      
+    </div>
+    
+    
+    {% include scripts.html %}
+        
+  </body>
+</html>
+

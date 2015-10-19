@@ -9,3 +9,7 @@ baseurl: /hive-ci
 
 # Build settings
 markdown: kramdown
+
+collections:
+  documentation:
+    output: true

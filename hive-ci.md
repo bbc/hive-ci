@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: documentation
 title: Hive CI
 ---
 
-<h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
+<h1><span class="label label-danger pull-right">COMING SOON</span></h1>
 
 # Hive CI
 
