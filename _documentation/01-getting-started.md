@@ -26,27 +26,6 @@ such as hive-runner-android, to provide device specific functionality. The base
 hive-runner gem provides a shell runner that enables scripts to be run on the
 server.
 
-#### Quick start
-
-Install the hive-runner and set up your hive:
-
-    gem install hive-runner
-    hive_setup my_hive
-
-Follow the instructions and, after configuring as appropriate for your hive
-type, start the Hive with:
-
-    cd my_hive
-    hived start
-
-See the status of the Hive with:
-
-    hived status
-
-Stop the Hive with:
-
-    hived stop
-
 ### DeviceDB
 
 ### Testmine
