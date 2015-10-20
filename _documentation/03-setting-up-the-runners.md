@@ -13,7 +13,7 @@ Installing the ruby daemons for job execution
 
 ## Requirements
 
-The Hive Runner requires Ruby 1.9 or greater.
+The Hive Runner requires Ruby 1.9.3 or greater.
 
 ## Installing the runner
 
