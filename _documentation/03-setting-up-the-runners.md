@@ -54,6 +54,7 @@ and the following sections:
 Contained within the controllers section are subsections for each of device
 module. All controller types include the following options:
 
+{: .table .table-condensed .table-striped}
 | Option          | Description                                |
 |-----------------|--------------------------------------------|
 | port_range_size | Number of ports to allocate to each worker |
@@ -61,6 +62,7 @@ module. All controller types include the following options:
 
 Additionally, the shell controller takes the following options
 
+{: .table .table-condensed .table-striped}
 | Option  | Description                                             |
 |---------|---------------------------------------------------------|
 | workers | Number of shell workers                                 |
@@ -72,6 +74,7 @@ The range of ports available for workers.
 
 ### Logging
 
+{: .table .table-condensed .table-striped}
 | Option        | Description                                  |
 |---------------|----------------------------------------------|
 | directory     | Location of log files                        |
@@ -84,12 +87,15 @@ The range of ports available for workers.
 
 ### Timings
 
+{: .table .table-condensed .table-striped}
 | Option                   | Description                                                           |
+|--------------------------|-----------------------------------------------------------------------|
 | worker_loop_interval     | Time for each worker to wait between polls to the scheduler           |
 | controller_loop_interval | Time for the Hive daemon to wait between polls to the device database |
 
 ### Network
 
+{: .table .table-condensed .table-striped}
 | Option    | Description                                    |
 |-----------|------------------------------------------------|
 | scheduler | URL of the Hive Scheduler                      |
