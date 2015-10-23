@@ -4,12 +4,15 @@ title: Running an Android Hive
 permalink: documentation/android-hive.html
 ---
 
+{: .pull-right}
+![Android Hive](/hive-ci/images/android-hive.png)
+
 # Running an android hive
 
 {: .lead}
-Setting up an android runner environment, and coping with devices
-
-<br />
+The massive fragmentation of the Android market makes it a primary target of
+Hive CI. This page illustrates how to set up your android test environment and
+install Hive Runner for Android.
 
 ## Pre-requisites
 
@@ -24,10 +27,10 @@ If you've already setup a Hive and want to add the Android runner afterwards, yo
 
 ## Android Config
 
-  controller:
-    android:
-      name_stub: ANDROID_WORKER
-      port_range_size: 10
+    controller:
+      android:
+        name_stub: ANDROID_WORKER
+        port_range_size: 10
 
 ## Keeping a healthy hive
 
@@ -35,10 +38,10 @@ Hive Runner Android includes some diagnostic checks for memory usage, battery te
 
 If you wish to use these diagnostics you need to enable them through the config, below is an example of how to enable the uptime diagnostic and reboot once a day:
 
-   diagnostics:
-     android: {}
-       uptime: {
-              reboot_timeout: 86400,
-            }
+    diagnostics:
+      android: {}
+      uptime: {
+        reboot_timeout: 86400,
+      }
 
 

@@ -4,12 +4,17 @@ title: Running an iOS Hive
 permalink: documentation/ios-hive.html
 ---
 
+
 # Running an iOS Hive
 
 {: .lead}
-Setting up an iOS test environment
+Setting up an iOS hive can be more involved than setting up an Android Hive and
+requires a developer certificate and provisioning profile before you can install
+applications and test them on devices.
 
-<br />
+{: .pull-right}
+![Android Hive](/hive-ci/images/ios-hive.png)
+
 
 ## Pre-requisites
 

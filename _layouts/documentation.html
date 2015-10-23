@@ -14,7 +14,7 @@
       <div class="page-content">
         {{ page.name }}
         <div class="col-xs-12 col-sm-2">
-          <ul class="nav nav-pills nav-stacked">
+          <ul class="nav nav-pills nav-stacked nav-compact">
             {% for doc in site.documentation %}
             <li role="presentation">
               <a href="/hive-ci{{ doc.url }}">{{ doc.title }}
@@ -25,7 +25,7 @@
         </div>
       
                         
-        <div class="col-xs-10  col-sm-8">
+        <div class="col-xs-12  col-sm-9">
         {{ content }}
         </div>
       </div>

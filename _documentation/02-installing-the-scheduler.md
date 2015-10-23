@@ -7,9 +7,9 @@ permalink: documentation/installing-hive-scheduler.html
 # Installing the Scheduler
 
 {: .lead}
-Setting up the Hive web application
-
-<br />
+The scheduler is the main web application that drives Hive CI. It is where you
+define your tests, and schedule them to run on devices. The results of your
+test runs get reported back into the scheduler after they have run.
 
 ## Installation instructions
 

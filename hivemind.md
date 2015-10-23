@@ -1,11 +1,11 @@
 ---
 layout: default
-title: DeviceDB
+title: Hive Mind
 ---
 
 <h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
 
-# DeviceDB
+# Hive Mind
 
 {: .lead}
 **A device monitoring and inventory application for Hive-CI**
@@ -15,7 +15,7 @@ title: DeviceDB
 <br />
 <br />
 
-DeviceDB allows you to administer your hives and devices:
+Hive Mind allows you to administer your hives and devices:
 
 * Specify which devices run which type of tests
 * Look up device information
@@ -23,10 +23,3 @@ DeviceDB allows you to administer your hives and devices:
 
 It also serves as an inventory system for your office devices.
 
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />

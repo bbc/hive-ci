@@ -7,9 +7,10 @@ permalink: documentation/installing-runners.html
 # Setting up the Runners
 
 {: .lead}
-Installing the ruby daemons for job execution
+Hive Runners are daemons that perform the execution of your tests. They are also
+resonsible for monitoring devices and keeping them ready for execution. This
+page guides you through general insallation instructions.
 
-<br />
 
 ## Requirements
 
