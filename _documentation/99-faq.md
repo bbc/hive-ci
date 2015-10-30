@@ -20,4 +20,8 @@ in.
 
 <hr />
 
-#### 
+#### Why aren't my screenshots getting uploaded to the Scheduler?
+
+You need to make sure that any assets you want uploading to the Scheduler are
+written to (or copied to) the results directory for the job. The $HIVE_RESULTS
+environment variable exposes this path for your tests.

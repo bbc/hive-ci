@@ -1,20 +1,24 @@
 ---
 layout: documentation
-title: Installing the Runners
+title: Advanced runner setup
 permalink: documentation/installing-runners.html
 ---
 
-# Setting up the Runners
+# Advanced runner setup
 
 {: .lead}
 Hive Runners are daemons that perform the execution of your tests. They are also
 resonsible for monitoring devices and keeping them ready for execution. This
 page guides you through general insallation instructions.
 
-
 ## Requirements
 
-The Hive Runner requires Ruby 1.9.3 or greater.
+We recommend running your hive with ruby 2.0 and above, but it will also work
+with ruby 1.9.3.
+
+Once you've got ruby installed, you will need to install bundler:
+
+    gem install bundler
 
 ## Installing the runner
 

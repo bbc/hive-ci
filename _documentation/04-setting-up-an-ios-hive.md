@@ -1,11 +1,11 @@
 ---
 layout: documentation
-title: Running an iOS Hive
+title: Setting up an iOS Hive
 permalink: documentation/ios-hive.html
 ---
 
 
-# Running an iOS Hive
+# Setting up an iOS Hive
 
 {: .lead}
 Setting up an iOS hive can be more involved than setting up an Android Hive and
