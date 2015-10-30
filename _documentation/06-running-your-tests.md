@@ -19,10 +19,15 @@ execution variables.
 To add a new script:
 
 1.  Click on the **Scripts** link on the top nav
+
 2.  Click **New**
+
 3.  Click on a platform:
+
     ![Target Platforms](/hive-ci/images/script-types.jpg)
+
 4.  Type in a name for your script
+
 5.  Fill in the script template
 
 If you want to add parametisation, you can do so by adding execution variables.
