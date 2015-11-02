@@ -14,10 +14,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/hive-ci/documentation/hive-ci.html">Hive CI</a></li> 
-        <li><a href="/hive-ci/hivemind.html">HiveMind</a></li>
-        <li><a href="/hive-ci/testmine.html">Testmine</a></li>
-        <li><a href="/hive-ci/test-tools.html">Test Tools</a></li>
+        {% for link in site.navigation %}
+        {% if page.url == link.url %}
+          {% assign current = 'active' %}
+        {% else %}
+          {% assign current = '' %}
+        {% endif %}
+        <li class="{{ current }}">
+          <a class="{{ current }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+        </li>
+        {% endfor %}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

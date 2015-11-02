@@ -13,3 +13,13 @@ markdown: kramdown
 collections:
   documentation:
     output: true
+
+navigation:
+  - text: Hive CI
+    url: /documentation/hive-ci.html
+  - text: HiveMind
+    url: /hivemind.html
+  - text: TestMine
+    url: /testmine.html
+  - text: Test Tools
+    url: /test-tools.html
