@@ -15,13 +15,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         {% for link in site.navigation %}
-        {% if page.url == link.url %}
-          {% assign current = 'active' %}
-        {% else %}
-          {% assign current = '' %}
-        {% endif %}
+        {% assign current = '' %}
+        {% for p in link.pages %}
+          {% if page.url == p %}
+            {% assign current = 'active' %}
+          {% endif %}
+        {% endfor %}
         <li class="{{ current }}">
-          <a class="{{ current }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+          <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
         </li>
         {% endfor %}
       </ul>

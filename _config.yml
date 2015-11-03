@@ -16,10 +16,26 @@ collections:
 
 navigation:
   - text: Hive CI
-    url: /documentation/hive-ci.html
+    url: documentation/hive-ci.html
+    pages:
+      - /documentation/hive-ci.html
+      - /documentation/getting-started.html
+      - /documentation/installing-hive-scheduler.html
+      - /documentation/android-hive.html
+      - /documentation/ios-hive.html
+      - /documentation/installing-runners.html
+      - /documentation/running-your-tests.html
+      - /documentation/smart-retries.html
+      - /documentation/faq.html
   - text: HiveMind
-    url: /hivemind.html
+    url: hivemind.html
+    pages:
+      - /hivemind.html
   - text: TestMine
-    url: /testmine.html
+    url: testmine.html
+    pages:
+      - /testmine.html
   - text: Test Tools
-    url: /test-tools.html
+    url: test-tools.html
+    pages:
+      - /test-tools.html
