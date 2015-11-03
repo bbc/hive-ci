@@ -16,7 +16,7 @@ Tools and libraries released under the BBC Hive open source project
 *BBC Hive* is a *BBC Digital* initiative to contribute open source tools and
 libraries to the open source community. This page provides an overview of
 the projects that fall under this open source banner. They're all hosted on
-github and [MIT licensed](/hive-ci/license).
+github and [MIT licensed](/hive-ci/license.html).
 
 * * * 
 
