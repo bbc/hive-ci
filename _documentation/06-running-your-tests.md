@@ -115,41 +115,52 @@ Once your tests are set up you can trigger a batch in two ways:
     
 5. Click **Next** to click through the various optional sections of the form.
 
-  * Fill in any execution variables you need
-  
-  * Upload the build or builds if your tests need them
-  
-  * Add or remove any queues you want to run the tests on
-  
-  * Optionally choose to split the tests
-    Note: This is only available if you have defined the tests you were 
+    * Fill in any execution variables you need  
+    * Upload the build or builds if your tests need them
+    * Add or remove any queues you want to run the tests on
+    * Optionally choose to split the tests
+      
+      **Note**: This is only available if you have defined the tests you were 
 
 6. Click **Finish** to trigger your tests
 
 ### Simple 'Hello world' example
 
-Go into the 'Scripts' section and create a new script. Select
-'Shell Script' as the target platform.
-Set the name to 'Hello \<name\>' and in the template box enter:
+1. Go into the **Scripts** tab
 
-```bash
-# This will use the execution variable 'word'
-echo Hello $HIVE_WORD
-```
+2. Create a new script
 
-Add a new execution variable called `word` and set the field type to 'String'. Save the script.
+3. Select **Shell Script** as the target platform
 
-Go into the 'Projects' section and create a new project. Set the name to
-'Hello world' and select the 'Hello \<name\>' script. Select the
-'Manual' population mechanism and enter 'world' in the Word field and 'bash'
-in the Queues field. Leave all other fields as the defaults. Save the project.
+4. Set the name to <code>Hello \<name\></code> and in the template box enter:
+   <code>echo Hello $HIVE_WORD</code>
 
-Go into the 'Batches' section and create a new batch. Set the name to 'First
-test batch'. Select 'Hello world' as the project and set the version to '1.0'.
-Leave all other fields as the defaults. Save the batch.
+5. Add a new execution variable called `word` and set the field type to **String**
 
-In the 'Batches' section you will now see the batch you have just created and
-by clicking on the name you can see a single job belonging to this batch for
+6. Save the script
+
+7. Go into the **Projects** section and create a new project.
+
+8. Set the name to **Hello world** and select your **Hello \<name\>** script
+
+9. Select the **Manual** population mechanism and enter <code>world</code> in
+   the Word field and <code>bash</code> in the Queues field. Leave all other
+   fields as the defaults.
+   
+10. Save the project.
+
+11. Go into the **Batches** section and create a new batch. Set the name to
+<code>First test batch</code>.
+
+12. Select <code>Hello world</code> as the project and set the version to
+<code>1.0</code>.
+
+13. Leave all other fields as the defaults.
+
+14. Save the batch.
+
+In the **Batches** section you will now see the batch you have just created
+and by clicking on the name you can see a single job belonging to this batch for
 the queue 'bash'. If you have a hive set up to run shell tests on a queue
 named 'bash' then this test will be executed and by clicking on the job number
 you can view the output.
