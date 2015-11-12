@@ -25,7 +25,7 @@ We recommend using git to download the code and manage updates. Pull down the
 code from github and checkout the latest stable tag:
 
     git clone	git@github.com:bbc/hive-scheduler.git
-    git co stable
+    git checkout stable
 
 Install the gem dependecies for the application:
 
