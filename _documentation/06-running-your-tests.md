@@ -35,13 +35,98 @@ These are exposed in your scripts as environment variables.
 
 ## Creating projects
 
+You should first create a script to base your project on. When you're ready to
+create a project:
 
+1.  Click on the **Projects** link on the top nav
+
+2.  Click **New**
+
+3.  Fill in a **Name** for your project
+
+4.  Fill in a **Respository** for where your code presides -- currently we support
+git and svn locations*. 
+
+5.  Fill in the **Execution Directory** -- this is the directory relative to the root
+of your checkout where your code presides. You should set this to `.` if your
+tests execute in the root of your checkout.
+
+6.  Select the exectution **Script** from the dropdown.
+
+7.  Select a **Population Mechanism**. This should typically be **Manual**
+unless you're using the optional **TestRail** integration.
+
+    The **Population Mechanism** defines what test you run, and what devices
+    they run on.
+
+8.  Add in the queues you want the tests to run against.
+
+
+**Note** that queues are currently only discoverable from the hive runner
+command line. Run the following on your hive to discover the queues available to
+you:
+
+    hived status
+    
+    start_hive: running [pid 14952]
+    
+    Controllers in use:
+      * shell
+    Total number of devices: 2
+    
+    +---------+--------+-----+-----------+--------+
+    | Device  | Worker | Job | Status    | Queues |
+    +---------+--------+-----+-----------+--------+
+    +---------+--------+-----+-----------+--------+
+    | Shell-1 | 14956  | --- | ---       | osx    |
+    |         |        |     |           | shell  |
+    +---------+--------+-----+-----------+--------+
+    | Shell-2 | 14957  | --- | ---       | osx    |
+    |         |        |     |           | shell  |
+    +---------+--------+-----+-----------+--------+
+
+
+Note there are two shell workers, each available on the osx and shell queues.
+    
+Finally click **Create Project** to run your tests.
+    
+* Note that we only support the git default branch although we're working on
+supporting multiple branches and tags.
 
 ## Triggering a batch
 
+Once your tests are set up you can trigger a batch in two ways:
 
+* Using the UI
 
-### Hello world
+* From an external system using the api
+
+### Triggering with the UI
+
+1.  Click on the 'Batches' tab
+
+2.  Fill in a **Name** for the batch
+
+3.  Select the **Project** you previously set up
+
+4.  Fill in a **Version**
+    This is a string that represents the version of the thing being tested. This
+    is useful for comparing results across different builds.
+    
+5. Click **Next** to click through the various optional sections of the form.
+
+  * Fill in any execution variables you need
+  
+  * Upload the build or builds if your tests need them
+  
+  * Add or remove any queues you want to run the tests on
+  
+  * Optionally choose to split the tests
+    Note: This is only available if you have defined the tests you were 
+
+6. Click **Finish** to trigger your tests
+
+### Simple 'Hello world' example
 
 Go into the 'Scripts' section and create a new script. Select
 'Shell Script' as the target platform.
@@ -69,34 +154,4 @@ the queue 'bash'. If you have a hive set up to run shell tests on a queue
 named 'bash' then this test will be executed and by clicking on the job number
 you can view the output.
 
-### Android test
-
-The Android Calabash script is set up by default. In the 'Projects'
-section create a new project and select 'Android Calabash' as the execution
-type. Set the name to 'X Platform Example' and enter the following in the
-repository field:
-
-```
-git@github.com:calabash/x-platform-example.git
-```
-
-Select 'Manual' as the population mechanism and enter 'android-5.1.1' in the
-queue field. Click on the 'Add queue' link and enter 'android-4.4.4' in the
-new queue field.
-
-**Note;** the hive runner is configured to run tests listed
-in queues specified by name. The values entered in these fields should be
-changed as appropriate for the configuration of your hives.
-
-Save the project.
-
-In the 'Batches' section create a new batch and select the project 'X Platform
-Example'. Set the name to 'Testing X platform example' and set the version.
-Upload the apk, which can be found at
-
-* https://github.com/calabash/x-platform-example/tree/master/prebuilt
-
-Leave all other fields unchanged (the list of queues may be amended as required)
-and save the batch. As with the 'Hello world' example, the jobs will run if
-hives are set up with devices for the given queues and output can be viewed.
 
