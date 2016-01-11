@@ -30,3 +30,18 @@ tests running on devices:
 * [hive-runner-android](https://github.com/bbc/hive-runner-android)
 * [hive-runner-ios](https://github.com/bbc/hive-runner-ios)
 
+## [hive_mind](https://github.com/bbc/hive_mind)
+
+This is a work-in-progress rewrite of our internal DeviceDB system. HiveMind
+is the central information and monitoring system for all your mobile devices.
+
+You don't need HiveMind to run your hive, but it is very helpful when the
+numbers of devices starts to grow. Although work-in-progress, it's very nearly
+at a stage where you can start using it.
+
+# Licence
+
+All the Hive projects are available under the MIT license. More details are
+available on the [contributing pages](http://bbc.github.io/hive-ci/contributing.html).
+
+Copyright (c) 2015 BBC 
