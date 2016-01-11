@@ -1,21 +1,18 @@
-# hive-ci
+# Hive-CI
 
-*Run your tests on real devices without the pain*
+Hive CI is a CI Platform for on-device testing. It encompasses a number of
+applications, tools and libraries that we use at the BBC for running tests on
+physical devices on our in-house device cloud.
 
-Hive CI is a CI system built around devices:
-* execute your tests on physical devices
-* connect all your devices & put them to work for you
-* compare results across different models & configurations
-* monitor devices for stability and performance
+The Hive codebase is split across a lot of repositories on github. This repo
+serves as a central landing-page for our github repositories.
 
-Hive CI is language/framework agnostic & used by different teams in the BBC with different requirements:
-* Calabash UI tests on mobiles
-* Appium browser and native app tests
-* Javascript TV application automation
-* Live on-device performance monitoring
+If you want to set up a hive, you're best looking at the documentation site:
+[http://bbc.github.io/hive-ci/documentation/hive-ci.html]
 
-Hive CI understands your tests:
-* Distinguish between failures & infrastructure problems
-* Parallelise your tests runs
-* Quickly retry only your failures
-* Identify flakey tests
+If you're interested in the contributing, the following repositories encompass
+the major repositories.
+
+## [Hive Scheduler](https://github.com/bbc/hive-scheduler)
+
+This is the main web application that drives the Hive. It's here that you
