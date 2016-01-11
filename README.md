@@ -7,18 +7,18 @@ physical devices on our in-house device cloud.
 The Hive codebase is split across a lot of repositories on github. This repo
 serves as a central landing-page for our github repositories.
 
-If you want to set up a hive, you're best looking at the documentation site:
-[http://bbc.github.io/hive-ci/documentation/hive-ci.html]
+If you want to set up a hive, you're best looking at [the documentation
+site](http://bbc.github.io/hive-ci/documentation/hive-ci.html).
 
 If you're interested in the contributing, the following repositories contain
 the core code and details of how to start contributing.
 
-## [Hive Scheduler](https://github.com/bbc/hive-scheduler)
+## [hive-scheduler](https://github.com/bbc/hive-scheduler)
 
 This is the main web application that drives the Hive. It's here that you
 set up your tests and schedule them to run on devices.
 
-## [Hive Runner](https://github.com/bbc/hive-runner)
+## [hive-runner](https://github.com/bbc/hive-runner)
 
 The runner is the execution component of the hive. The runner detects and
 manages connected devices and takes jobs from the scheduler for execution.
