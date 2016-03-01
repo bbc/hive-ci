@@ -40,7 +40,8 @@ To install the hive-runner and set up your hive:
     hive_setup my_hive
 
 The hive_setup script will guide you through the install. You will need to
-choose 'Add Module' and entering 'android' and then 'BBC' for the account name.
+choose `Add Module` and enter `android`. At the prompt `Get 'android' from Github?`
+answer 'no' to ensure the module is downloded from Rubygems.
 
 If you've already setup a Hive and want to add the Android runner afterwards,
 you can do so by editing the Gemfile within your runner folder and adding in:
