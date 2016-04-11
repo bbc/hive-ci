@@ -121,6 +121,17 @@ The Hive Runner is installed as a gem:
 gem install hive-runner
 {% endhighlight %}
 
+## Java
+
+On Ubuntu, ADB requires Sun Java which can be installed as:
+
+{% highlight bash %}
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+sudo apt-get install oracle-java7-set-default
+{% endhighlight %}
+
 ## ADB
 
 To run Android tests you will need to have ADB installed. Note that the version
@@ -136,7 +147,6 @@ that comes with Ubuntu will cause problems so use this instead:
 {% highlight bash %}
 export PATH=$PATH:/opt/adt/sdk/tools
 export PATH=$PATH:/opt/adt/sdk/platform-tools
-export PATH=$PATH:/sbin
 export ANDROID_HOME=/opt/adt/sdk
 export ANDROID_SDK_HOME=/opt/adt/sdk
 {% endhighlight %}
