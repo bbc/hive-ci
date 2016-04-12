@@ -12,6 +12,9 @@ problems). Suggested instructions are given for installing a Hive on Ubuntu but
 alternative methods may be used if desired (for example, `rbenv` in place of
 `rvm`).
 
+On Mac it might be necessary to install 
+<a href="/hive-ci/workshop/mac-preinstall.html">a few other things.</a>
+
 ## Ruby
 
 The Hive requires Ruby version 2.0 or later. You can test the version of Ruby
@@ -121,6 +124,9 @@ The Hive Runner is installed as a gem:
 gem install hive-runner
 {% endhighlight %}
 
+This is installed as part of the workshop but it can take some time so it is
+useful to install in advance.
+
 ## Java
 
 On Ubuntu, ADB requires Sun Java which can be installed as:
@@ -149,4 +155,20 @@ export PATH=$PATH:/opt/adt/sdk/tools
 export PATH=$PATH:/opt/adt/sdk/platform-tools
 export ANDROID_HOME=/opt/adt/sdk
 export ANDROID_SDK_HOME=/opt/adt/sdk
+{% endhighlight %}
+
+## Javascript
+
+Rails requires a JavaScript runtime. For example,
+
+{% highlight bash %}
+sudo apt-get install nodejs
+{% endhighlight %}
+
+## Set up for Calabash tests
+
+Install Calabash:
+
+{% highlight bash %}
+gem install calabash-android
 {% endhighlight %}
