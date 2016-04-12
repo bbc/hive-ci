@@ -29,7 +29,7 @@ with [RVM](https://rvm.io/rvm/install):
 
 {% highlight bash %}
 # Install the latest version of Ruby with RVM
-# (Approx 5 minutes)
+# (Approx 10 minutes)
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 rvm install ruby-2.3.0
@@ -40,9 +40,9 @@ gem install bundler
 Some Ruby components will be installed during the workshop. This can be done in
 advance
 
-## Downloading Hive Scheuler, Hive Mind and Test Mine
+## Downloading Hive Scheuler and Hive Mind
 
-Hive Scheduler, Hive Mind and Test Mine are Rails applications and can be
+Hive Scheduler and Hive Mind are Rails applications and can be
 downloaded from Github with one of the following three methods.
 
 ### With Git
@@ -53,7 +53,6 @@ cd hive
 
 git clone https://github.com/bbc/hive-scheduler
 git clone https://github.com/bbc/hive_mind
-git clone https://github.com/bbc/testmine
 {% endhighlight ^%}
 
 ### As a Tarball package
@@ -65,17 +64,14 @@ cd hive
 # Download
 curl -L -o hive-scheduler.tar.gz https://github.com/bbc/hive-scheduler/tarball/master
 curl -L -o hive_mind.tar.gz https://github.com/bbc/hive_mind/tarball/master
-curl -L -o testmine.tar.gz https://github.com/bbc/testmine/tarball/master
 
 # Unpack
 tar -xzvf hive-scheduler.tar.gz
 tar -xzvf hive_mind.tar.gz
-tar -xzvf testmine.tar.gz
 
 # Change to sensible directory name
 mv bbc-hive-scheduler* hive-scheduler
 mv bbc-hive_mind* hive_mind
-mv bbc-testmine* testmine
 {% endhighlight ^%}
 
 ### As a Zip package
@@ -86,37 +82,40 @@ cd hive
 
 curl -L -o hive-scheduler.tar.gz https://github.com/bbc/hive-scheduler/zipball/master
 curl -L -o hive_mind.tar.gz https://github.com/bbc/hive_mind/zipball/master
-curl -L -o testmine.tar.gz https://github.com/bbc/testmine/zipball/master
 
 # Unpack
 unzip hive-scheduler.zip
 unzip hive_mind.zip
-unzip testmine.zip
 
 # Change to sensible directory name
 mv bbc-hive-scheduler* hive-scheduler
 mv bbc-hive_mind* hive_mind
-mv bbc-testmine* testmine
 {% endhighlight ^%}
 
-## Preparing Hive Scheduler, Hive Mind and Test Mine
+## Preparing Hive Scheduler and Hive Mind
 
-The Ruby gems required for the three Rails applications can be installed with:
+The Ruby gems required for the two Rails applications can be installed as shown
+below.
+
+For the workshop the development environment will be used and this does not
+require MySQL. To avoid installing the mysql2 Ruby Gem the
+'--without production' option is used. This can be removed if the mysql
+development libraries are installed.
 
 {% highlight bash %}
+# (About 5 minutes)
 cd hive-scheduler
-bundle install
+bundle install --without production
 cd ..
 
 cd hive_mind
-bundle install
-cd ..
-
-cd testmine
-bundle install
+bundle install --without production
 cd ..
 {% endhighlight %}
 
+Note, '--without production' will install without MySQL. If you
+have a MySQL server and the developer libraries installed then then this can be
+removed from both lines.
 
 ## Hive Runner
 
@@ -129,7 +128,12 @@ gem install hive-runner
 This is installed as part of the workshop but it can take some time so it is
 useful to install in advance.
 
-## Java
+## Java (Mac)
+
+Install JDK for Mac with the instructions at
+[http://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html](http://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html).
+
+## Java (Ubuntu)
 
 On Ubuntu, ADB requires Sun Java which can be installed as:
 
@@ -145,7 +149,8 @@ sudo apt-get install oracle-java7-set-default
 To run Android tests you will need to have ADB installed. Note that the version
 that comes with Ubuntu will cause problems so use this instead:
 
-* Download the latet version of the SDK from [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html)
+* Download the latet version of the SDK from [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html). Ensure you install the
+  command line tools.
 * Unzip and move to `/opt/adt/sdk`
 * Run `/opt/adt/sdk/tools/android update sdk --no-ui` to download the platform
   tools. This will install all platforms and so may take a while.
@@ -159,7 +164,7 @@ export ANDROID_HOME=/opt/adt/sdk
 export ANDROID_SDK_HOME=/opt/adt/sdk
 {% endhighlight %}
 
-## Javascript
+## Javascript (Ubuntu)
 
 Rails requires a JavaScript runtime. For example,
 
