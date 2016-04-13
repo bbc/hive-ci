@@ -33,9 +33,13 @@ with [RVM](https://rvm.io/rvm/install):
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 source $HOME/.rvm/scripts/rvm
-rvm install ruby-2.3.0
+rvm install ruby-2.2.4
 gem install bundler
 {% endhighlight %}
+
+Note, Ruby 2.3 can be used but some of the gems may need to be updated
+(`bundle update`)
+in the Rails applications.
 
 Some Ruby components will be installed during the workshop. This can be done in
 advance
