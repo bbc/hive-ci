@@ -97,15 +97,29 @@ spectrometer) you should take a look at the base gem documentation.
 <button class="btn btn-default">[Docs](http://www.rubydoc.info/github/bbc/device_api/master)</button>
 
 
+* * *
+
+#### Res
+
+Res is a set of formatting and parsing tools for test results. Res is key to how Hive CI
+understands and interprets tests. We use lots of different test runners that all produce different
+test output formats. We use res as a standard test result format making it easier to report our
+tests into the different tools that teams use.
+
+<br />
+<button class="btn btn-default">[Code](https://github.com/bbc/res)</button>
+<button class="btn btn-default">[Gem](https://rubygems.org/gems/res)</button>
+
+
 * * * 
 
-### ISA -- Image Session Analyzer
+### LAVA -- Libraries for Audio Video Analysis
 
-ISA is a ruby gem for comparing screenshots over a testing session. We use it in
-combination with the [device_api](#device_api) gem to capture screenshots during
+LAVA are libraries for capturing and performing analysis on device-video playback.
+We use LAVA in combination with the [device_api](#device_api) gem to capture screenshots during
 video playback tests and confirm that video is actually being played.
 
-ISA uses ImageMagick to do the actual image analysis, but presents a simple
+LAVA uses ImageMagick to do the actual image analysis, but presents a simple
 interface lets you concentrate on writing your tests.
 
 It also generates animated gifs of the testing session, so we can visibly check
@@ -113,10 +127,8 @@ any problems the tests find.
 
 
 <br />
-<button class="btn btn-default">[Github](https://github.com/bbc/isa)</button>
-<button class="btn btn-default">[Rubygems](https://rubygems.org/gems/isa)</button>
-<button class="btn btn-default">[Documentation](http://www.rubydoc.info/github/bbc/isa/master)</button>
-
+<button class="btn btn-default">[Video](https://github.com/bbc/lava-frame-compare)</button>
+<button class="btn btn-default">[Audio](https://github.com/bbc/lava-audio)</button>
 
 
 * * *

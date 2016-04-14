@@ -3,7 +3,7 @@ layout: default
 title: Testmine
 ---
 
-<h1 class="pull-right"><span class="label label-grey">COMING SOON</span></h1>
+<h1 class="pull-right"><span class="label label-grey">COMING MONDAY</span></h1>
 
 # Testmine
 
