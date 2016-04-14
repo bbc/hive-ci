@@ -44,7 +44,7 @@ in the Rails applications.
 Some Ruby components will be installed during the workshop. This can be done in
 advance
 
-## Downloading Hive Scheuler and Hive Mind
+## Downloading Hive Scheduler and Hive Mind
 
 Hive Scheduler and Hive Mind are Rails applications and can be
 downloaded from Github with one of the following three methods.
