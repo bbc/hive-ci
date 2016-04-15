@@ -39,9 +39,41 @@ To install the hive-runner and set up your hive:
     gem install hive-runner
     hive_setup my_hive
 
-The hive_setup script will guide you through the install. You will need to
-choose `Add Module` and enter `android`. At the prompt `Get 'android' from Github?`
-answer 'no' to ensure the module is downloded from Rubygems.
+The hive_setup script will guide you through the install:
+# Type `1` to `Add Module`
+# Type `android`
+# Type `y` to accept the default installation (from rubygems)
+# Type `x` to confirm
+
+     hive_setup myhive
+
+    +--------+--------+--------+
+    | Device | Module | Source |
+    +--------+--------+--------+
+    +--------+--------+--------+
+    
+    1) Add module
+    X) Continue 
+    
+    > 1
+    
+    Module name: android
+    
+    Module 'hive-runner-android' from https://rubygems.org/gems/hive-runner-android
+    Correct? (y/n) y
+    
+    +---------+---------------------+-----------------------------------------------+
+    | Device  | Module              | Source                                        |
+    +---------+---------------------+-----------------------------------------------+
+    | android | hive-runner-android | https://rubygems.org/gems/hive-runner-android |
+    +---------+---------------------+-----------------------------------------------+
+    
+    1) Add module
+    X) Continue
+    
+    > x
+    Executing 'bundle install' ... SUCCESS
+
 
 If you've already setup a Hive and want to add the Android runner afterwards,
 you can do so by editing the Gemfile within your runner folder and adding in:
@@ -59,7 +91,8 @@ you can do so by editing the Gemfile within your runner folder and adding in:
 
 Hive Runner Android includes some diagnostic checks for memory usage, battery temperature and uptime.
 
-If you wish to use these diagnostics you need to enable them through the config, below is an example of how to enable the uptime diagnostic and reboot once a day:
+In order to use these diagnostics you need to enable them through the config, below is an
+example of how to enable the uptime diagnostic and reboot once a day:
 
     diagnostics:
       android: {}

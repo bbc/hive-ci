@@ -17,7 +17,7 @@ test and ensure that only the tests that fail are retried.
 ## RES
 
 The RES library is central to how Hive CI understands tests. RES is a standard
-output format for test result resports. It captures more than just basic pass/fail
+output format for test result reports. It captures more than just basic pass/fail
 information. It captures the context of how your tests were run, and lets you
 include urns to drive what your retry arguments look like.
 
