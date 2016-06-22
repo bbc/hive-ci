@@ -23,8 +23,7 @@ unsuitable for our CI needs.
 
 ## Pre-requisites
 
-Install the <a href="https://developer.android.com/studio/index.html#downloads" target="_blank">Android SDK</a>. You should ensure that the follwoing commands are
-available on the command line:
+Install the [Android SDK](https://developer.android.com/studio/index.html#downloads). You should ensure that the following commands are available on the command line:
 
 * `adb`
 * `aapt`
