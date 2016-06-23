@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Running Your Tests
+title: Appium
 permalink: documentation/appium.html
 ---
 
