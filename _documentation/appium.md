@@ -17,7 +17,7 @@ mobile browser supported by Appium.
 
 To run both above just point tests to Appium server and access few global variables.
 
-### Install Appium
+### Install Appium and Dependencies
 1. Pre-requisite are npm and node (Install npm and node/nodejs using brew (on mac) or apt-get (on linux server))
 	
 	* `sudo apt-get install npm`
@@ -25,12 +25,16 @@ To run both above just point tests to Appium server and access few global variab
 
 	Note: In some cases we require nodejs to start appium (particularly on mac)
 
-2. Install appium 
+2. Install appium command
 
 	* `npm install appium`
 
+	Note: `npm install appium@version` will install specific appium version
+
+3. Install [ios_webkit_debug_proxy](https://github.com/google/ios-webkit-debug-proxy) (for ios only)
+
 ### Global/Environment variables  
-1. 	Access below varibles in Hive Script and test script as well as and when required
+1. 	Access below varibles in Hive Script and test script as and when required
 
 	* `APPIUM_PORT` - Appium port to listen on   
 	* `CHROMEDRIVER_PORT` - Port upon which ChromeDriver will run
@@ -45,4 +49,8 @@ To run both above just point tests to Appium server and access few global variab
 
 This should start appium server on port $APPIUM_PORT. In the test script use RemoteWebDriver address as http://0.0.0.0:$APPIUM_PORT.
 
-**Note**: This is just a pointer and different appium server capabilities can be used either while starting server or can be passed from DesiredCapabilities
+### Starting webkit proxy (IOS only)
+	
+	ios_webkit_debug_proxy -c $DEVICE_TARGET:$CHROMEDRIVER_PORT -d > $HIVE_RESULTS/ios_webkit.log &	
+
+**Note**: These are just pointers and different appium server capabilities can be used either while starting server or can be passed from DesiredCapabilities
