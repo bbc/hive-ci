@@ -20,6 +20,8 @@ Calabash is used to perform automated tests for native Android and iOS apps
 	* `APP_BUNDLE_PATH` - Uploaded ios build in 'Create Batch' section is accessible here
 	* `HIVE_RESULTS` - Hive result directory. Any dumped output here would be accessible in jobs log section
 
+* Use `adb -s $APK_DEVICE_ARG command` instead of `adb command` in the test scripts
+
 ### Executing calabash tests for Android
 	
 	bundle exec calabash-android run $APK_PATH -f Res::Formatters::RubyCucumber -o \"$HIVE_RESULTS/out.res\" -f pretty > $HIVE_RESULTS/pretty.out 2>$HIVE_RESULTS/stderr.log
