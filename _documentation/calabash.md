@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Calabash
-permalink: documentation/calabash.html
+permalink: documentation/calabash_test.html
 ---
 
 # Running Calabash Tests
@@ -13,14 +13,14 @@ Calabash is used to perform automated tests for native Android and iOS apps
 1. While creating Hive script select appropriate Android or iOS as target platform 
 
 ### Global/Environment variables  
-1. 	Access below varibles in Hive Script and test script when required
+1. 	Access below variables in Hive Script and test script when required
 
 	* `ADB_DEVICE_ARG` - Unique device identifier of the connected physical device
 	* `APK_PATH` - Uploaded android build in 'Create Batch' section is accessible here
 	* `APP_BUNDLE_PATH` - Uploaded ios build in 'Create Batch' section is accessible here
 	* `HIVE_RESULTS` - Hive result directory. Any dumped output here would be accessible in jobs log section
 
-* Use `adb -s $APK_DEVICE_ARG command` instead of `adb command` in the test scripts
+* Use `adb -s $ADB_DEVICE_ARG command` to point to target device 
 
 ### Executing calabash tests for Android
 	

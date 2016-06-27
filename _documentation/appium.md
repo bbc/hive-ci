@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Appium
-permalink: documentation/appium.html
+permalink: documentation/appium_test.html
 ---
 
 # Running Appium Tests
@@ -34,7 +34,7 @@ To run both above just point tests to Appium server and access few global variab
 3. Install [ios_webkit_debug_proxy](https://github.com/google/ios-webkit-debug-proxy) (for ios only)
 
 ### Global/Environment variables  
-1. 	Access below varibles in Hive Script and test script as and when required
+1. 	Access below variables in Hive Script and test script as and when required
 
 	* `APPIUM_PORT` - Appium port to listen on   
 	* `CHROMEDRIVER_PORT` - Port upon which ChromeDriver will run
