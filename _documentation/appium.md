@@ -47,11 +47,11 @@ To run both above just point tests to Appium server and access few global variab
 
 ### Starting an Appium server in Hive Script
 
-**Android**
+***Android***
 
 	/path/to/appium/.bin/appium -U $ADB_DEVICE_ARG --port $APPIUM_PORT --bootstrap-port $BOOTSTRAP_PORT --chromedriver-port $CHROMEDRIVER_PORT > $HIVE_RESULTS/appium.log 2>&1 &
 
-**IOS (on Mac)**
+***IOS (on Mac)***
 
 	node /opt/appium/node_modules/.bin/appium -U $DEVICE_TARGET --port $APPIUM_PORT --bootstrap-port $BOOTSTRAP_PORT  --webkit-debug-proxy-port $CHROMEDRIVER_PORT --tmp /tmp/ios/$HIVE_JOB_ID > $HIVE_RESULTS/appium.log 2>&1 &
 

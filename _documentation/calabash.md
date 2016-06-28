@@ -10,36 +10,37 @@ permalink: documentation/calabash_test.html
 
 Calabash is used to perform automated tests for native Android and iOS apps
 
-1. While creating Hive script select appropriate Android or iOS as target platform 
+While creating Hive script select appropriate Android or iOS as target platform 
 
-### Global/Environment variables  
+#### Global/Environment variables  
 1. 	Access below variables in Hive Script and test script when required
 
 	* `ADB_DEVICE_ARG` - Unique device identifier of the connected physical device
 	* `APK_PATH` - Uploaded android build in 'Create Batch' section is accessible here
+	* `DEVICE_TARGET` - Unique device identifier of the connected physical ios device
 	* `APP_BUNDLE_PATH` - Uploaded ios build in 'Create Batch' section is accessible here
 	* `HIVE_RESULTS` - Hive result directory. Any dumped output here would be accessible in jobs log section
 
-* Use `adb -s $ADB_DEVICE_ARG command` to point to target device 
+2. Use `adb -s $ADB_DEVICE_ARG command` to point to target android device 
 
-### Executing calabash tests for Android
+#### Executing calabash tests on Android
 	
 	bundle exec calabash-android run $APK_PATH -f Res::Formatters::RubyCucumber -o \"$HIVE_RESULTS/out.res\" -f pretty > $HIVE_RESULTS/pretty.out 2>$HIVE_RESULTS/stderr.log
 
-### Executing calabash tests for iOS
+#### Executing calabash tests on iOS
 	
 	bundle exec calabash-android run $APP_BUNDLE_PATH -f Res::Formatters::RubyCucumber -o \"$HIVE_RESULTS/out.res\" -f pretty > $HIVE_RESULTS/pretty.out 2>$HIVE_RESULTS/stderr.log
 	
-We can use cucumber as well for execution of calabash tests for Hive Script in following way
+**We can use cucumber as well for execution of calabash tests in Hive Script in following way**
 
-**Android**
+***Android***
 	
 	calabash-android build $APK_PATH
 	export TEST_SERVER=`ls test_servers/`
 	bundle exec cucumber ADB_DEVICE_ARG=$ADB_DEVICE_ARG APP_PATH=$APK_PATH TEST_APP_PATH=test_servers/$TEST_SERVER -f Res::Formatters::RubyCucumber  -o $HIVE_RESULTS/out.res -f pretty > $HIVE_RESULTS/pretty.out 2>$HIVE_RESULTS/stderr.log
 
-**IOS**
+***IOS***
 
 	bundle exec cucumber APP_BUNDLE_PATH=/path/to/test.app -f Res::Formatters::RubyCucumber -o $HIVE_RESULTS/out.res -f pretty > $HIVE_RESULTS/pretty.out 2>$HIVE_RESULTS/stderr.log 
 
-**Note**: Include [res](https://github.com/bbc/res) gem in your gemfile 
+**Note**: Include [res](https://github.com/bbc/res) gem in your gemfile to use formatters
