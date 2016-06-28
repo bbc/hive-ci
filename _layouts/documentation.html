@@ -17,7 +17,7 @@
           <ul class="nav nav-pills nav-stacked nav-compact">
             {% for doc in site.documentation %}           
               {% unless doc.url contains 'test.html' %}
-                <li role="presentation" data-role="collapsible" data-iconpos="right" data-inset="false">
+                <li role="presentation">
                   <a href="/hive-ci{{ doc.url }}">{{ doc.title }}</a>
                   {% if doc.url contains 'running-your-test' %}
                     {% for docs in site.documentation %}
