@@ -15,11 +15,19 @@
         {{ page.name }}
         <div class="col-xs-12 col-sm-2">
           <ul class="nav nav-pills nav-stacked nav-compact">
-            {% for doc in site.documentation %}
-            <li role="presentation">
-              <a href="/hive-ci{{ doc.url }}">{{ doc.title }}
-              </a>
-            </li>
+            {% for doc in site.documentation %}           
+              {% unless doc.url contains 'test.html' %}
+                <li role="presentation" data-role="collapsible" data-iconpos="right" data-inset="false">
+                  <a href="/hive-ci{{ doc.url }}">{{ doc.title }}</a>
+                  {% if doc.url contains 'running-your-test' %}
+                    {% for docs in site.documentation %}
+                      {% if docs.url contains 'test.html' %}
+                        <li class="navbar-collapse"> <a href="/hive-ci{{ docs.url }}">{{ docs.title }} </a> </li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </li>
+              {% endunless %}
             {% endfor %}
           </ul>
         </div>
