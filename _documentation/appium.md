@@ -37,7 +37,7 @@ To run both above just point tests to Appium server and access few global variab
 1. 	Access below variables in Hive Script and test script as and when required
 
 	* `APPIUM_PORT` - Appium port to listen on   
-	* `CHROMEDRIVER_PORT` - Port upon which ChromeDriver will run
+	* `CHROMEDRIVER_PORT` - Port upon which ChromeDriver will run (Temporarily used in ios webkit proxy)
 	* `BOOTSTRAP_PORT`  - (Android-only) port to use on device to talk to Appium
 	* `ADB_DEVICE_ARG` - Unique device identifier of the connected physical android device
 	* `APK_PATH` - Uploaded build in 'Create Batch' section is accessible here
@@ -45,7 +45,7 @@ To run both above just point tests to Appium server and access few global variab
 	* `APP_BUNDLE_PATH` - Uploaded ios build in 'Create Batch' section is accessible here
 	* `HIVE_RESULTS` - Hive result directory. Any dumped output here would be accessible in jobs log section
 
-### Starting an Appium server in Hive Script
+### Starting an Appium server 
 
 ***Android***
 
