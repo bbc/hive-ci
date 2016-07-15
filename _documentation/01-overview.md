@@ -38,12 +38,12 @@ Both Hive Scheduler and Hive Mind are web services that provide a web interface
 and an API for communicating with devices and hives. The Hive Runners, normally
 referred to simply as 'Hives' are servers to which the devices are connected.
 These may be located at multiple locations provided they are able to have a
-network connection to Hive Schduler and Hive Mind.
+network connection to Hive Scheduler and Hive Mind.
 
 ### Hive Scheduler
 
 The scheduler is the main hive application. It contains the definitions of your
-tests and allows you to scheduler those tests to run on devices that are connected
+tests and allows you to schedule those tests to run on devices that are connected
 to your runners.
 
 It is also where the results of your test runs are reported back.
@@ -57,8 +57,8 @@ The core of the Hive is the `hive-runner` gem and it is configured with one or
 more runner plugins depending on the device types that are to be connected.
 Currently there are plugins for:
 
-* Android mobiles devices, from the `hive-runner-android` gem
-* iOS mobiles devices, from the `hive-runner-ios` gem
+* Android mobile devices, from the `hive-runner-android` gem
+* iOS mobile devices, from the `hive-runner-ios` gem
 * TV and set top boxes, from the `hive-runner-tv` gem
 * Shell scripts, built into the core Hive Runner
 
@@ -75,9 +75,7 @@ support the devices you want to test.
 
 ### HiveMind
 
-Hive Mind is a database application for monitoring devices and device state. This
-project isn't yet ready for open source release, but you can still set up your
-hive without it.
+Hive Mind is a database application for monitoring devices and device state.
 
 ### Testmine
 
