@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: About
+title: Introduction
 permalink: documentation/hive-ci.html
 ---
 
