@@ -13,7 +13,7 @@ The TV Runner provides capabilities for executing tests on Smart, or Connected,
 TVs.
 
 For Smart TVs, the Hive does not normally have direct connection with the
-divice. As the applications for TVs are Javascript web applications this
+device. As the applications for TVs are Javascript web applications this
 problem is overcome by loading Javascript libraries along with the application
 to communicate with the Hive and with Hive Mind, and between tests a "holding
 application" that communicates with Hive Mind is loaded.
