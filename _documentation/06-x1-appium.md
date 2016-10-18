@@ -62,4 +62,4 @@ This should start appium server on port $APPIUM_PORT. In the test script use Rem
 	
 	ios_webkit_debug_proxy -c $DEVICE_TARGET:$CHROMEDRIVER_PORT -d > $HIVE_RESULTS/ios_webkit.log &	
 
-**Note**: These are just pointers and different appium server capabilities can be used either while starting server or can be passed from DesiredCapabilities
+**Note**: These are just pointers and different appium server capabilities can be used either while starting the server or can be passed from DesiredCapabilities
