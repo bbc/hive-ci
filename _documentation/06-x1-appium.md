@@ -2,6 +2,7 @@
 layout: documentation
 title: Appium
 permalink: documentation/appium_test.html
+menu_level: 2
 ---
 
 # Running Appium Tests
