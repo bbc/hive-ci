@@ -17,7 +17,7 @@
           <ul class="nav nav-pills nav-stacked nav-compact">
             {% for doc in site.documentation %}           
               <li role="presentation">
-                {% if doc.url contains 'test.html' %}
+                {% if doc.menu_level == 2 %}
                   <a href="/hive-ci{{ doc.url }}"> + {{ doc.title }}</a>
                 {% else %}
                   <a href="/hive-ci{{ doc.url }}">{{ doc.title }}</a>

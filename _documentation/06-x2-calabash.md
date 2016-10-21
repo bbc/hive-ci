@@ -2,6 +2,7 @@
 layout: documentation
 title: Calabash
 permalink: documentation/calabash_test.html
+menu_level: 2
 ---
 
 # Running Calabash Tests
