@@ -3,8 +3,6 @@ layout: default
 title: Testmine
 ---
 
-<h1 class="pull-right"><span class="label label-grey">COMING MONDAY</span></h1>
-
 # Testmine
 
 {: .lead}
@@ -21,11 +19,4 @@ Testmine is a test result analytics application:
 * Compare results across devices
 * Spot unreliable tests
 
-    
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />  
-  
+Testmine can be downloaded from [Github.](https://github.com/bbc/testmine)
