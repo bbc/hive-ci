@@ -40,3 +40,5 @@ navigation:
     pages:
       - /test-tools.html
 
+kramdown:
+  input: GFM
