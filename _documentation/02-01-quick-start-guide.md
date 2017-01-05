@@ -7,7 +7,7 @@ permalink: documentation/quick-start.html
 {: .lead}
 This quick start guide demonstrates how to get a single Hive Runner and Hive Scheduler up and running on a single server to execute a simple shell script test. This is followed by two further setup guides; setting up Hive Mind and a Hive Runner to run Android tests.
 
-# Contents
+## Contents
 * [Part 1: Hive Runner and Hive Scheduler]({{ post.url }}#part-1-hive-runner-and-hive-scheduler)
   * [Prerequisites](#prerequisites)
   * [Hive Scheduler](#hive-scheduler)
@@ -22,9 +22,9 @@ This quick start guide demonstrates how to get a single Hive Runner and Hive Sch
   * [Connect Hive Scheduler to Hive Mind](connect-hive-scheduler-to-hive-mind)
 * [Suggested Hardware](#suggested-hardware)
 
-# Part 1: Hive Runner and Hive Scheduler
+## Part 1: Hive Runner and Hive Scheduler
 
-## Prerequisites
+### Prerequisites
 
 The following software needs to be installed for this guide:
 
@@ -33,7 +33,7 @@ The following software needs to be installed for this guide:
 * MySQL server and the client development library (for Hive Scheduler)
 * A Javascript runtime (for Hive Scheduler). Eg, NodeJS
 
-### Ruby
+#### Ruby
 
 It is possible to use the version of Ruby installed with the operating system provided it is version 2.1 or later. However, when installing gems it may be necessary to have escalated privileges. For this reason, the recommended method is to use Ruby installed using a version manager such as RVM. Full details can be found at https://rvm.io/. For Ubuntu curl will need to be installed first so the full instructions are:
 
@@ -56,7 +56,7 @@ Additionally, install the bundler gem:
 $ gem install bundler
 ```
 
-### Git, MySQL and the Javascript runtime
+#### Git, MySQL and the Javascript runtime
 
 On Ubuntu, the remaining requirements can be installed with:
 
@@ -76,7 +76,7 @@ export DATABASE_DATABASE=<database name>
 
 Either reload this file with `source ~/.bashrc` or log out and back in.
 
-## Hive Scheduler
+### Hive Scheduler
 
 Download the Hive Scheduler software with:
 
@@ -103,7 +103,7 @@ $ rails s
 
 After Rails has started up go to `http://localhost:3000` in a browser to see the running scheduler.
 
-## Hive Runner
+### Hive Runner
 
 Install the Hive Runner gem:
 
@@ -158,7 +158,7 @@ start_hive: running [pid 37175]
 
 If you now go back to `http://localhost:3000` to view the Hive Scheduler, as set up above, and follow the "Monitoring -> Workers" link you can see the five shell workers. Note that the 'Hive' and 'Device' columns will not contain information as this depends on the Hive Mind device database.
 
-## Example test
+### Example test
 
 The example test will find the current date and compare with a day of the week provided as a parameter for the test. This way you can see the behaviour for tests that pass and fail.
 
@@ -167,14 +167,14 @@ Additionally, some system information will be gathered and reported in the log f
 From the Hive Scheduler, http:/localhost:3000, follow the link in the top bar for 'Scripts'. Then press the 'New' button. From the 'Target platform' options select 'Shell Script' and fill in the name 'Day test'. In the template field enter:
 
 ```bash
-# System information
+## System information
 uname -a
 df -h
 
-# Generate error output
+## Generate error output
 ls /tmp/directory_does_not_exist
 
-# Do something to take some time
+## Do something to take some time
 date
 sleep 30
 date
@@ -183,7 +183,7 @@ date
 sleep 30
 date
 
-# Create a custom output file
+## Create a custom output file
 echo Hello World > $HIVE_RESULTS/hello.txt
 
 if [ `date +%a` == $HIVE_DAY ]
@@ -248,7 +248,7 @@ Once the test has completed `hived status` will show the test to be `completed` 
 
 Click on the job id, `#1` in the left-most column of the jobs table to view details about the job. This will display the execution script for the test together with the standard output and error as well as any other output files.
 
-# Part 2: Android Hive Runner
+## Part 2: Android Hive Runner
 
 In this section the Hive Runner will be set up to run Android tests using the `hive-runner-android` gem. It will be assumed that the Hive Scheduler will be running on the local machine, as detailed above. If you already have a Hive Runner set up it can be modified to run Android tests. Alternatively, it can be configured during the setup.
 
@@ -283,9 +283,9 @@ cd android-sdk-linux/tools
 ln -s ../build-tools/23.0.1/aapt .
 ```
 
-Note that `23.0.1` in the above command may need to be changed depending on your version of Android Studio.
+Note that `23.0.1` in the above command may need to be changed depending on your version of Android SDK.
 
-## Modifying an existing Hive Runner
+### Modifying an existing Hive Runner
 
 While in the Hive Runner directory, stop the runner with
 
@@ -339,7 +339,7 @@ The output of `hived status` will show that the Android controller is in use and
 | Device             | Worker | Job | Status    | Queues             |
 +--------------------+--------+-----+-----------+--------------------+
 +--------------------+--------+-----+-----------+--------------------+
-| Android-ZX1D22TMRS | 44655  | --- | ---       | xt1068             |
+| Android-SERIAL1234 | 44655  | --- | ---       | xt1068             |
 |                    |        |     |           | motorola           |
 |                    |        |     |           | android            |
 |                    |        |     |           | android-6.0        |
@@ -347,7 +347,7 @@ The output of `hived status` will show that the Android controller is in use and
 +--------------------+--------+-----+-----------+--------------------+
 ```
 
-## Setting up a new Hive Runner with the Android plugin
+### Setting up a new Hive Runner with the Android plugin
 
 Install the Hive Runner gem (if it is not already installed):
 
@@ -385,7 +385,7 @@ The output of `hived status` will show that the Android controller is in use and
 +--------------------+--------+-----+-----------+--------------------+
 ```
 
-## Example test
+### Example test
 
 For this example the Calabash Cross Platform Example from https://github.com/calabash/x-platform-example will be used. This test uses the `zip`
 
@@ -418,7 +418,7 @@ Create a new project using this script and set the fields:
 
 Create a new batch with this project. Download the pre-built apk from https://github.com/calabash/x-platform-example/tree/master/prebuilt and submit it in the 'Build information' tab. All other fields can be left as the default.
 
-# Part 3: Hive Mind
+## Part 3: Hive Mind
 
 Hive Mind is used to manage devices connected to the hive. Whilst it is not essential to use Hive Mind, it is useful for displaying the following information:
 * Which devices are connected to which Hive Runners
@@ -446,7 +446,7 @@ $ DATABASE_NAME=hivemind rails s
 
 If you now visit http://localhost:3001 you can view the home page of Hive Mind with no devices registered. Leave Hive Mind running while proceeding on to configure Hive Mind and Hive Scheduler.
 
-## Connect Hive Runner to Hive Mind
+### Connect Hive Runner to Hive Mind
 
 Stop the Hive Runner if it is running:
 
@@ -473,7 +473,7 @@ Visiting http://localhost:3001 will now show two device types, Hive and Mobile. 
 
 Note that the default names are given to devices; the hostname for a Hive and the device model for a mobile. These names can be changed from the device details page.
 
-## Connect Hive Scheduler to Hive Mind
+### Connect Hive Scheduler to Hive Mind
 
 The connection to Hive Mind from Hive Scheduler is defined in `config/settings.yml` in Hive Scheduler. Ensure that the default or production sections have
 
@@ -486,7 +486,7 @@ and restart Hive Scheduler. Note that the setting requires an IP address or host
 
 Rerun the same tests created above and you will see the device name listed on the batch page once it has started running. 
 
-# Suggested Hardware
+## Suggested Hardware
 
 It is recommended that Ubuntu PCs should be used for Android Hive Runners and Macs should be used for iOS Hive Runners. The Hive Scheduler and Hive Mind would normally be on separate servers and may be hosted in the cloud.
 

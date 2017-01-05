@@ -7,8 +7,6 @@ permalink: documentation/hive-ci.html
 {: .pull-right}
 ![Loads of Devices](/hive-ci/images/pile-of-devices.png)
 
-# Introducing Hive CI
-
 {: .lead}
 At the BBC we build a large number of TV and mobile applications. In order to ensure the widest possible audience reach we have to test these applications across hundreds of different device models.
 

@@ -4,8 +4,6 @@ title: Overview
 permalink: documentation/overview.html
 ---
 
-# Overview
-
 {: .lead}
 Hive CI is a CI Platform for on-device testing. It encompasses a number of
 applications, tools and libraries that we use at the BBC for testing our
@@ -81,5 +79,5 @@ Hive Mind is a database application for monitoring devices and device state.
 
 Testmine is an optional results engine for HiveCI. It is a seperate application
 that stores detailed reports of your test runs, and lets you investigate trends
-in test performance. We will be releasing this component soon.
+in test performance.
 

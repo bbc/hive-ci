@@ -8,12 +8,12 @@ menu_level: 2
 {: .lead}
 The TV Hive Runner plugin is used for managing HTML application tests on TVs and set top boxes.
 
-# Contents
+## Contents
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [TV test lifecycle](#tv-test-lifecycle)
 
-# Prerequisites
+## Prerequisites
 
 Communication between TVs and the Hive Runner depends on [Hive Mind](https://github.com/bbc/hive_mind) and so this needs to be set up with the `hive_mind_tv` engine.
 
@@ -22,7 +22,7 @@ Between tests the devices need to be running a holding application such as [Hive
 For more details about the communication between the Hive and TVs see the [TV test lifecycle](#tv-test-lifecycle) section below.
 
 
-# Installation
+## Installation
 
 The Ruby gem for the TV Hive plugin is `hive-runner-tv` and it can be added to an existing hive by adding
 
@@ -49,7 +49,7 @@ and in the `network` section add:
 
 Alternatively, the TV plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `tv` as the module name. The `network` section above will need to be configured after installation as above.
 
-# TV test lifecycle
+## TV test lifecycle
 
 The TV Runner provides capabilities for executing tests on Smart, or Connected, TVs.
 
