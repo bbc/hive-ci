@@ -6,13 +6,13 @@
   <body>
     <div class="site-wrapper page-image">
       
+      <a id='top-of-page'></a>
       {% include navbar.html %}
        
               
       <div class="row">
         
       <div class="page-content">
-        {{ page.name }}
         <div class="col-xs-12 col-sm-2">
           <ul class="nav nav-pills nav-stacked nav-compact">
             {% for doc in site.documentation %}           
@@ -29,7 +29,9 @@
       
                         
         <div class="col-xs-12  col-sm-9">
+        <h1>{{ page.title }}</h1>
         {{ content }}
+        <p><a href='#top-of-page'>Top</a></p>
         </div>
       </div>
       </div>
