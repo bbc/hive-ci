@@ -18,8 +18,8 @@ This quick start guide demonstrates how to get a single Hive Runner and Hive Sch
   * [Setting up a new Hive Runner with the Android plugin](#setting-up-a-new-hive-runner-with-the-android-plugin)
   * [Example test](#example-test-1)
 * [Part 3: Hive Mind](#part-3-hive-mind)
-  * [Connect Hive Runner to Hive Mind](connect-hive-runner-to-hive-mind)
-  * [Connect Hive Scheduler to Hive Mind](connect-hive-scheduler-to-hive-mind)
+  * [Connect Hive Runner to Hive Mind](#connect-hive-runner-to-hive-mind)
+  * [Connect Hive Scheduler to Hive Mind](#connect-hive-scheduler-to-hive-mind)
 * [Suggested Hardware](#suggested-hardware)
 
 ## Part 1: Hive Runner and Hive Scheduler
