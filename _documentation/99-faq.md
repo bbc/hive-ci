@@ -4,8 +4,6 @@ title: FAQ
 permalink: documentation/faq.html
 ---
 
-# FAQ
-
 {: .lead}
 Random collection of all the things we've ever been asked.
 
