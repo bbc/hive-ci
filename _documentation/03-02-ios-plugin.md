@@ -11,12 +11,19 @@ The iOS Hive Runner plugin is used for managing tests on iPhones and iPads. It c
 ## Contents
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
+* [Troubleshooting](#troubleshooting)
+  * [Devices are not detected](#devices-are-not-detected)
 
 ## Prerequisites
 
 [XCode](https://developer.apple.com/xcode/) and [libimobiledevice](http://www.libimobiledevice.org/) need to be installed as these are used for communicating with the attached devices.
 
 A developer certificate and provisioning profile are required to install and run apps on the device.
+
+To allow devices to be used in the Hive:
+
+* The device must have 'Enable UI Automation', under Settings -> Developer, is enabled.
+* The device must be trusted.
 
 ## Installation
 
@@ -32,6 +39,32 @@ to `Gemfile` and executing `bundle install` while the Hive is stopped. Before re
     ios:
       name_stub: IOS_WORKER
       port_range_size: 10
+      signing_identity: 'Your iPhone developer signing identity'
 ```
 
-Alternatively, the iOS plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `ios` as the module name.
+Alternatively, the iOS plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `ios` as the module name. You will need to add the `signing_identity` line to `config/settings.yml`, shown above, before starting the Hive.
+
+## Troubleshooting
+
+### Devices are not detected
+
+For an iOS device to be detected by the Hive it needs to be listed by
+`idevice_id` and `ideviceinfo` must be able to list its information:
+
+```bash
+$ idevice_id -l
+$ ideviceinfo -u <udid of your device>
+```
+
+#### Problem: `idevice_id` command not found
+
+Install `libimobiledevice`
+
+```bash
+$ brew install libimobiledevice`
+```
+
+#### Problem: `ideviceinfo` does not return device information or returns "Could not connect to lockdown"
+
+* The device must be trusted when the USB cable is attached
+* 'Enable UI Automation' must be set. On the device open 'Settings' and open 'Developer'.
