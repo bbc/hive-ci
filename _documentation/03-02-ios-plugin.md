@@ -11,6 +11,8 @@ The iOS Hive Runner plugin is used for managing tests on iPhones and iPads. It c
 ## Contents
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
+* [Troubleshooting](#troubleshooting)
+  * [Devices are not detected](#devices-are-not-detected)
 
 ## Prerequisites
 
