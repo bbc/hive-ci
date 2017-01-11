@@ -57,10 +57,10 @@ $ ideviceinfo -u <udid of your device>
 
 #### Problem: `idevice_id` command not found
 
-Install `libidevicemobile`
+Install `libimobiledevice`
 
 ```bash
-$ brew install libidevicemobild`
+$ brew install libimobiledevice`
 ```
 
 #### Problem: `ideviceinfo` does not return device information or returns "Could not connect to lockdown"
