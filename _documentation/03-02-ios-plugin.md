@@ -39,9 +39,10 @@ to `Gemfile` and executing `bundle install` while the Hive is stopped. Before re
     ios:
       name_stub: IOS_WORKER
       port_range_size: 10
+      signing_identity: 'Your iPhone developer signing identity'
 ```
 
-Alternatively, the iOS plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `ios` as the module name.
+Alternatively, the iOS plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `ios` as the module name. You will need to add the `signing_identity` line to `config/settings.yml`, shown above, before starting the Hive.
 
 ## Troubleshooting
 
