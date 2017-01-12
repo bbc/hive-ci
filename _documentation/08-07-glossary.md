@@ -4,9 +4,6 @@ title: Glossary
 permalink: documentation/glossary.html
 ---
 
-{: .lead}
-This page has not yet been pushed to Github
-
 {: .dl-horizontal}
 {: #controller} Controller
 : The *controller* is part of the Hive Runner and its purpose is to manage all
