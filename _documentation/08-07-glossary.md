@@ -4,14 +4,14 @@ title: Glossary
 permalink: documentation/glossary.html
 ---
 
-{: .dl-horizontal}
+{: .dl-horizontal .dl-spaced}
 {: #controller} Controller
 : The *controller* is part of the Hive Runner and its purpose is to manage all
   devices of a particular type so, for example, a Hive for Android devices will
   have a single Android controller. The controller for a device type is
   responsible for creating and managing [workers](#worker) of that type. The
-  Hive Runner gem includes the controller for shell runners and each plugin gem
-  includes its own controller.
+  Hive Runner [gem](https://en.wikipedia.org/wiki/RubyGems) includes the
+  controller for shell runners and each plugin gem includes its own controller.
 
 Device API
 : *Device API* is a Ruby library used by the runner to abstract device
@@ -36,9 +36,10 @@ Hive Messages
 : The *Hive Runner* or *Runner* is the software for managing devices and
   executing tests. The runner includes one or more controllers as appropriate
   for the devices. The core Hive Runner, including the shell controller, is
-  contained in the `hive-runner` gem and plugins for device types follow the
-  naming convention `hive-runner-device_type`. For example,
-  `hive-runner-android` and `hive-runner-ios`.
+  contained in the `hive-runner` [gem](https://en.wikipedia.org/wiki/RubyGems)
+  and plugins for device types follow the naming convention
+  `hive-runner-device_type`. For example, `hive-runner-android` and
+  `hive-runner-ios`.
 
 {: #hive-scheduler} Hive Scheduler
 : The *Hive Scheduler* or *Scheduler* is a web application for creating and
@@ -52,7 +53,7 @@ Mind Meld
 
 Res
 : *Res* is a results format used for reporting test results from the
-  [runner]{#hive-runner} back to the [scheduler.]{#hive-scheduler}
+  [runner](#hive-runner) back to the [scheduler.](#hive-scheduler)
 
 Runner:
 : See [Hive Runner](#hive-runner)

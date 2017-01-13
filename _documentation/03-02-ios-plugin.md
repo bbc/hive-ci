@@ -11,6 +11,7 @@ The iOS Hive Runner plugin is used for managing tests on iPhones and iPads. It c
 ## Contents
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
+* [Test environment](#test-environment)
 * [Troubleshooting](#troubleshooting)
   * [Devices are not detected](#devices-are-not-detected)
 
@@ -44,6 +45,31 @@ to `Gemfile` and executing `bundle install` while the Hive is stopped. Before re
 
 Alternatively, the iOS plugin can be included when setting up a new Hive. Select the option to 'Add module' and enter `ios` as the module name. You will need to add the `signing_identity` line to `config/settings.yml`, shown above, before starting the Hive.
 
+## Test Environment
+
+The following environment variables for use by test scripts executed by the
+iOS runner.
+
+{: .table .table-striped}
+
+| Variable | Description |
+|---|---|
+| `$BUNDLE_ID` | The bundle id of the application |
+| `$APP_PATH` | The path to the application bundle file (IPA) |
+| `$APP_BUNDLE_PATH` | Alias for `$APP_PATH` |
+| `$DEVICE_TARGET` | Serial number of the device |
+| `$DEVICE_NAME` | Name of the device |
+| `$PLATFORM_NAME` | Set to `iOS` |
+| `$PLATFORM_VERSION` | iOS version |
+| `$DEVICE_ENDPOINT` | `http://<device ip>:37265` (Used by Calabash tests) |
+| `$CHARLES_PROXY_PORT` | Port on the Hive available for use by the test |
+| `$APPIUM_PORT` | Port on the Hive available for use by the test |
+| `$BOOTSTRAP_PORT` | Port on the Hive available for use by the test |
+| `$CHROMEDRIVER_PORT` | Port on the Hive available for use by the test |
+
+The port variables are named for convenience of use with various testing
+frameworks but may be used by the test when any local ports are required.
+
 ## Troubleshooting
 
 ### Devices are not detected
@@ -58,10 +84,10 @@ $ ideviceinfo -u <udid of your device>
 
 #### Problem: `idevice_id` command not found
 
-Install `libimobiledevice`
+Install `libimobiledevice`. For example, use `brew` on MacOS.
 
 ```bash
-$ brew install libimobiledevice`
+$ brew install libimobiledevice
 ```
 
 #### Problem: `ideviceinfo` does not return device information or returns "Could not connect to lockdown"
