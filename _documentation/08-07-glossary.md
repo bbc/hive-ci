@@ -89,7 +89,7 @@ Scheduler
 Script
 : See Execution Script
 
-Worker:
+Worker
 : The *worker* is part of the Hive Runner and its purpose is to
   control a single device of a particular type. A worker for a device is
   created by the controller for the device's type and it is
