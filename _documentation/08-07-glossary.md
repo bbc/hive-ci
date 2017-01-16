@@ -5,6 +5,11 @@ permalink: documentation/glossary.html
 ---
 
 {: .dl-horizontal .dl-spaced}
+Batch
+: A *batch* is an instance of a project for a specific version or build of the
+  product. A batch comprises one or more jobs, which execute the same project
+  with the same configuration and product build for different devices.
+
 Controller
 : The *controller* is part of the Hive Runner and its purpose is to manage all
   devices of a particular type so, for example, a Hive for Android devices will
@@ -16,6 +21,11 @@ Controller
 Device API
 : *Device API* is a Ruby library used by the runner to abstract device
   management functions.
+
+Execution Script
+: An *execution script* or *script* is a set of commands used as the foundation
+  of a test in the hive scheduler. An execution script may be used by one or
+  more projects.
 
 Hive
 : A *Hive* is a server running the Hive Runner software.
@@ -51,15 +61,33 @@ Hive Scheduler
 Mind Meld
 : *Mind Meld* is a Ruby library providing an API for Hive Mind.
 
+Job
+: A *job* is an execution of a batch for a single device chosen according to
+  the queue attached to the job. A batch is made up of multiple jobs configured
+  for different queues.
+
+Project
+: A *project* in the Hive Scheduler denotes a test set of a particular product.
+  A project comprises an execution script together with configuration details.
+
+Queue
+: A *queue* is a label attached to one or more devices to indicate them as
+  candidates for executing a job. For example, a queue may contain all devices
+  of a given operating system version while another queue may contain only
+  devices of a very specific make, model and operating system.
+
 Res
 : *Res* is a results format used for reporting test results from the
   runner back to the scheduler.
 
-Runner:
+Runner
 : See Hive Runner
 
-Scheduler:
+Scheduler
 : See Hive Scheduler
+
+Script
+: See Execution Script
 
 Worker:
 : The *worker* is part of the Hive Runner and its purpose is to
