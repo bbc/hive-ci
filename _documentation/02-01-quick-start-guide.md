@@ -62,7 +62,7 @@ On Ubuntu, the remaining requirements can be installed with:
 
 ``` bash
 # For all components
-sudo apt-get install git-all
+sudo apt-get install git
 # For Hive Scheduler and Hive Mind
 sudo apt-get install mysql-server libmysqlclient-dev nodejs
 ```
