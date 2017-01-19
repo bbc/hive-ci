@@ -61,7 +61,10 @@ $ gem install bundler
 On Ubuntu, the remaining requirements can be installed with:
 
 ``` bash
-sudo apt-get install git-all mysql-server libmysqlclient-dev nodejs
+# For all components
+sudo apt-get install git-all
+# For Hive Scheduler and Hive Mind
+sudo apt-get install mysql-server libmysqlclient-dev nodejs
 ```
 
 The Rails and MySQL database configuration should be set in environment variables for Rails to use. Add the following lines to `~/.bashrc`
