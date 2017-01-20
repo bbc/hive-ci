@@ -2,6 +2,7 @@
 layout: documentation
 title: Software Links
 permalink: documentation/software-links.html
+menu_level: 2
 ---
 
 {: .lead}
