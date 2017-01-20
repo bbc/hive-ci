@@ -97,7 +97,7 @@ $ rake db:migrate
 $ rake assets:precompile
 ```
 
-Note, prior to version 5.5.0 of Hive Scheduler it is also necessary to exectue
+Note, prior to version 5.5.0 of Hive Scheduler it is also necessary to execute
 
 ``` bash
 $ rake db:seed
