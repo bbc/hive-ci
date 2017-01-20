@@ -94,8 +94,13 @@ Set up the database and assets. If the database username is not `root` the first
 ``` bash
 $ rake db:create
 $ rake db:migrate
-$ rake db:seed
 $ rake assets:precompile
+```
+
+Note, prior to version 5.5.0 of Hive Scheduler it is also necessary to exectue
+
+``` bash
+$ rake db:seed
 ```
 
 Start the Hive Scheduler with:
