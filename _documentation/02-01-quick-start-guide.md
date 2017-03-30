@@ -17,7 +17,10 @@ This quick start guide demonstrates how to get a single Hive Runner and Hive Sch
   * [Modifying an existing Hive Runner](#modifying-an-existing-hive-runner)
   * [Setting up a new Hive Runner with the Android plugin](#setting-up-a-new-hive-runner-with-the-android-plugin)
   * [Example test](#example-test-1)
-* [Part 3: Hive Mind](#part-3-hive-mind)
+* [Part 3: iOS Hive Runner](#part-3-ios-hive-runner)
+  * [Modifying an existing Hive Runner](#modifying-an-existing-hive-runner-1)
+  * [Setting up a new Hive Runner with the iOS plugin](#setting-up-a-new-hive-runner-with-the-ios-plugin)
+* [Part 4: Hive Mind](#part-4-hive-mind)
   * [Connect Hive Runner to Hive Mind](#connect-hive-runner-to-hive-mind)
   * [Connect Hive Scheduler to Hive Mind](#connect-hive-scheduler-to-hive-mind)
 * [Suggested Hardware](#suggested-hardware)
@@ -380,7 +383,7 @@ The output of `hived status` will show that the Android controller is in use and
 | Device             | Worker | Job | Status    | Queues             |
 +--------------------+--------+-----+-----------+--------------------+
 +--------------------+--------+-----+-----------+--------------------+
-| Android-ZX1D22TMRS | 44655  | --- | ---       | xt1068             |
+| Android-Serial1234 | 44655  | --- | ---       | xt1068             |
 |                    |        |     |           | motorola           |
 |                    |        |     |           | android            |
 |                    |        |     |           | android-6.0        |
@@ -412,6 +415,7 @@ Note:
 Give the script a name such as 'Calabash Android'. No additional execution variables are required.
 
 Create a new project using this script and set the fields:
+
 * Name: Calabash Cross Platform Example
 * Repository: `https://github.com/calabash/x-platform-example.git`
 * Population mechanism: Manual
@@ -421,7 +425,128 @@ Create a new project using this script and set the fields:
 
 Create a new batch with this project. Download the pre-built apk from https://github.com/calabash/x-platform-example/tree/master/prebuilt and submit it in the 'Build information' tab. All other fields can be left as the default.
 
-## Part 3: Hive Mind
+## Part 3: iOS Hive Runner
+
+In this section the Hive Runner will be set up to run iOS tests using the `hive-runner-ios` gem. It will be assumed that the Hive Scheduler will be running on the local machine, as detailed above. If you already have a Hive Runner set up it can be modified to run iOS tests. Alternatively, it can be configured during the setup.
+
+Before starting it will be necessary to install XCode, ilibmobiledevice and
+ideviceinstaller.
+
+```bash
+xcode-select --install
+# Then select 'Install' from the pop-up and accept the license
+
+# Install brew if necessary. See https://brew.sh/
+
+# --HEAD is required until version 1.2.1 is officially released
+brew install --HEAD libimobiledevice
+
+brew install ideviceinstaller
+```
+
+The version of Ruby that comes installed with MacOS Sierra is 2.0.0 and so a newer version needs to be installed. For information about installing the latest version see https://rvm.io/rvm/install
+
+### Modifying an existing Hive Runner
+
+While in the Hive Runner directory, stop the runner with
+
+```bash
+$ hived stop
+```
+
+and then edit `Gemfile` to add the line
+
+```ruby
+gem 'hive-runner-ios'
+```
+
+and load the new gem
+
+```bash
+$ bundle install
+```
+
+Edit the file `config/settings.yml` so that it includes:
+
+```yaml
+  controllers:
+    shell:
+      # Number of shell workers to allocate
+      workers: 5
+      # Queue for each shell worker
+      queues:
+        - bash
+      # Number of ports to allocate to each shell worker
+      port_range_size: 50
+      name_stub: SHELL_WORKER
+    ios:
+      port_range_size: 10
+      name_stub: IOS_WORKER
+```
+
+Note that YAML file format depends on indentation so it is essential that `ios` is indented by the same number of spaces as `shell` and the fields underneath, `port_range_size` and `name_stub` should both be indented by the same number of spaces, more than `ios`. Optionally, you may remove the `shell` section if you do not want to execute shell runner tests.
+
+Restart the Hive Runner and ensure that it is running:
+
+```bash
+$ hived start
+$ hived status
+```
+
+The output of `hived status` will show that the iOS controller is in use and if an iOS device is connected it will be automatically listed. Note the list of queues that are automatically generated based on the make, model and ios version reported by `ideviceinfo`. 
+
+```
++----------------+--------+-----+-----------+------------------------+
+| Device         | Worker | Job | Status    | Queues                 |
++----------------+--------+-----+-----------+------------------------+
++----------------+--------+-----+-----------+------------------------+
+| Ios-SERIAL1234 | 11391  | --- | ---       | iphone_6_plus          |
+|                |        |     |           | ios                    |
+|                |        |     |           | ios-10.2               |
+|                |        |     |           | ios-10.2-iphone_6_plus |
+|                |        |     |           | iphone-10.2            |
++----------------+--------+-----+-----------+------------------------+
+```
+
+### Setting up a new Hive Runner with the iOS plugin
+
+Install the Hive Runner gem (if it is not already installed):
+
+```bash
+$ gem install hive-runner
+```
+
+and then run the `hive_setup`:
+
+```bash
+$ hive_setup my_hive
+```
+
+Select the option to 'Add module' and type in `ios` as the module name. This will add the `hive-runner-ios` gem.
+Continue the installation by typing 'x'. After the installation has completed enter the `my_hive` directory and start the Hive Runner:
+
+```bash
+$ cd my_hive
+$ hived start
+$ hived status
+```
+
+The output of `hived status` will show that the iOS controller is in use and if an iOS device is connected it will be automatically listed. Note the list of queues that are automatically generated based on the make, model and ios version information reported by ideviceinfo.
+
+```
++----------------+--------+-----+-----------+------------------------+
+| Device         | Worker | Job | Status    | Queues                 |
++----------------+--------+-----+-----------+------------------------+
++----------------+--------+-----+-----------+------------------------+
+| Ios-SERIAL1234 | 11391  | --- | ---       | iphone_6_plus          |
+|                |        |     |           | ios                    |
+|                |        |     |           | ios-10.2               |
+|                |        |     |           | ios-10.2-iphone_6_plus |
+|                |        |     |           | iphone-10.2            |
++----------------+--------+-----+-----------+------------------------+
+```
+
+## Part 4: Hive Mind
 
 Hive Mind is used to manage devices connected to the hive. Whilst it is not essential to use Hive Mind, it is useful for displaying the following information:
 * Which devices are connected to which Hive Runners
