@@ -96,3 +96,9 @@ Note, the `--HEAD` option is required to get the latest version as the current r
 
 * The device must be trusted when the USB cable is attached
 * 'Enable UI Automation' must be set. On the device open 'Settings' and open 'Developer'.
+
+#### Problem: Cannot find 'Developer' settings on device
+
+For iOS 10 and later the 'Developer' settings need to be enabled with XCode. With XCode running attach the device and the option will appear. If it does not, open the 'Devices' dialog from the Windows menu and select the device. On older versions of XCode there will be an option to enable the developer mode.
+
+This only needs to be done once for each device.
