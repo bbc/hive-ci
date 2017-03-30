@@ -17,7 +17,7 @@ The iOS Hive Runner plugin is used for managing tests on iPhones and iPads. It c
 
 ## Prerequisites
 
-[XCode](https://developer.apple.com/xcode/) and [libimobiledevice](http://www.libimobiledevice.org/) need to be installed as these are used for communicating with the attached devices.
+[XCode](https://developer.apple.com/xcode/), [libimobiledevice](http://www.libimobiledevice.org/) and [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller) need to be installed as these are used for communicating with the attached devices. Note that the currently released version of `libimobiledevice` (1.2.0) no longer works with recent versions of XCode and so it is necessary to installed from Github using (for example) `brew install --HEAD libimobiledevice`.
 
 A developer certificate and provisioning profile are required to install and run apps on the device.
 
@@ -87,8 +87,10 @@ $ ideviceinfo -u <udid of your device>
 Install `libimobiledevice`. For example, use `brew` on MacOS.
 
 ```bash
-$ brew install libimobiledevice
+$ brew install --HEAD libimobiledevice
 ```
+
+Note, the `--HEAD` option is required to get the latest version as the current release, 1.2.0, no longer works. See https://github.com/libimobiledevice/libimobiledevice/issues/380 for more details.
 
 #### Problem: `ideviceinfo` does not return device information or returns "Could not connect to lockdown"
 
