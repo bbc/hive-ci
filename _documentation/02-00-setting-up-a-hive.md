@@ -8,6 +8,6 @@ permalink: documentation/setting-up-a-hive.html
 How to set up a Hive.
 
 ## Contents
-* [Quick Start](quick_start.html)
-* [Best Practices](best_practices.html)
+* [Quick Start](quick-start.html)
+* [Best Practices](best-practices.html)
 * [Examples](examples.html)
