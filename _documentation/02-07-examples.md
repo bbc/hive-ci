@@ -18,7 +18,7 @@ This page contains some examples to show how tests may be set up and executed.
 
 Since XCode 8 it has been possible to create a build for testing that can then be zipped up into a package and used in a Hive batch. The method for creating the build is shown below but first the project in Hive Scheduler needs to be set up.
 
-On the Hive Scheduler, create a new test script with the 'iOS IPA' targed with the template:
+On the Hive Scheduler, create a new test script with the 'iOS IPA' target with the template:
 
 ```bash
 # Copy the uploaded build and rename as a zip file
