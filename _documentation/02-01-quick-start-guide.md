@@ -2,6 +2,7 @@
 layout: documentation
 title: Quick Start Guide
 permalink: documentation/quick-start.html
+menu_level: 2
 ---
 
 {: .lead}
