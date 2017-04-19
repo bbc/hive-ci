@@ -13,4 +13,9 @@ This page contains some notes of experience we have found in setting up and usin
 
 ## iOS devices
 
-* Notifications can cause UI tests to fail so as far as possible these notifications or the services that cause them should be disabled as far as possible.
+* Turn off notifications.
+  * Notifications can cause UI tests to fail so as far as possible these notifications or the services that cause them should be disabled. From the settings menu go to 'Notifications' and then for each app turn off notifications.
+* Turn on developer mode and UI automation.
+* Provision the device.
+* Turn off the screen lock on the device completely.
+  * If the screen lock is set then the device will boot up locked. Therefore it is necessary to unset the screen lock.
