@@ -28,12 +28,12 @@ gem 'device_api-ios'
 to the `Gemfile` of your project. Do detect all connected devices use
 
 ```ruby
-require 'device_api-android'
+require 'device_api/android'
 devices = DeviceAPI::Android.devices
 
 # or
 
-require 'device_api-ios'
+require 'device_api/ios'
 devices = DeviceAPI::IOS.devices
 ```
 
