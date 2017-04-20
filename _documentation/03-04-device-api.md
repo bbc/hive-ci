@@ -15,7 +15,7 @@ Device API is a collection of gems that make working with physical devices easy 
 
 ## Basic Usage
 
-Currently Device API support Android and iOS mobile devices. To install, add
+Currently Device API supports Android and iOS mobile devices. To install, add
 
 ```ruby
 gem 'device_api-android'
@@ -25,7 +25,7 @@ gem 'device_api-android'
 gem 'device_api-ios'
 ```
 
-to the `Gemfile` of your project. Do detect all connected devices use
+to the `Gemfile` of your project. To detect all connected devices use
 
 ```ruby
 require 'device_api/android'
@@ -37,7 +37,7 @@ require 'device_api/ios'
 devices = DeviceAPI::IOS.devices
 ```
 
-To get a list of the model and OS version of all devices:
+To get a list of the model and OS version of all attached devices:
 
 ```ruby
 devices.each do |d|
