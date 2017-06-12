@@ -51,8 +51,10 @@ Then log out and back or:
 
 ``` bash
 $ source $HOME/.rvm/scripts/rvm
-$ rvm use ruby
+$ rvm install 2.3
+$ rvm use 2.3
 ```
+Note that we have been informed of issues in installations of hive-runner/scheduler in ruby >= 2.4. So, use ruby < 2.4, preferrably 2.3.0
 
 Additionally, install the bundler gem:
 
