@@ -41,26 +41,21 @@ The following software needs to be installed for this guide:
 
 It is possible to use the version of Ruby installed with the operating system provided it is version 2.1 or later. However, when installing gems it may be necessary to have escalated privileges. For this reason, the recommended method is to use Ruby installed using a version manager such as RVM. Full details can be found at https://rvm.io/. For Ubuntu curl will need to be installed first so the full instructions are:
 
+If required install curl:
 ``` bash
 $ sudo apt-get install curl
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-$ \curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
-
-Then log out and back or:
 
 ``` bash
-$ source $HOME/.rvm/scripts/rvm
-$ rvm install 2.3
-$ rvm use 2.3
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 &&\
+curl -sL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles &&\
+source $HOME/.rvm/scripts/rvm &&\
+rvm install 2.3.0 --with-gems="bundler rubocop" &&\
+rvm --default use 2.3.0 &&\
+rvm rubygems latest
 ```
+
 Note that we have been informed of issues in installations of hive-runner/scheduler in ruby >= 2.4. So, use ruby < 2.4, preferrably 2.3.0
-
-Additionally, install the bundler gem:
-
-``` bash
-$ gem install bundler
-```
 
 #### Git, MySQL and the Javascript runtime
 
