@@ -2,6 +2,7 @@
 layout: documentation
 title: Glossary
 permalink: documentation/glossary.html
+menu_level: 2
 ---
 
 {: .dl-horizontal .dl-spaced}
@@ -40,7 +41,7 @@ Hive Messages
   between the runner and the scheduler.
 
 Hive Mind
-: *Hive Mind* is the device management web application for Hive CI
+: *Hive Mind* is the device management web application for Hive CI.
 
 Hive Runner
 : The *Hive Runner* or *Runner* is the software for managing devices and
