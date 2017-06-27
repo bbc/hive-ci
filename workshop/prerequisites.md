@@ -25,11 +25,13 @@ If Ruby is not installed or the version is too old then it can be installed
 with [RVM](https://rvm.io/rvm/install):
 
 {% highlight bash %}
-# Install the latest version of Ruby with RVM
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-source /home/jhaig/.rvm/scripts/rvm
-gem install bundler
+# Install Ruby 2.3.0 with RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 &&\
+curl -sL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles &&\
+source $HOME/.rvm/scripts/rvm &&\
+rvm install 2.3.0 --with-gems="bundler rubocop" &&\
+rvm --default use 2.3.0 &&\
+rvm rubygems latest
 {% endhighlight %}
 
 Some Ruby components will be installed during the workshop. This can be done in
